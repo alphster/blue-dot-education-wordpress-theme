@@ -1,4 +1,4 @@
-<?php
+	<?php
 /**
  * The template for displaying front page
  *
@@ -9,29 +9,60 @@
 
 get_header();
 ?>
-	<div class="hero-area">
-		<div class="cover"></div>
+	<div class="hero-content">
+		<div class="cover"></div>	
+		<div class="max-width">
+			asdas
+		</div>	
 	</div>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div class="news-header bg-blue">
+		<div class="max-width">
+		asdfdsf		
+		</div>
+	</div>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+	<div class="news-content">
+		<div class="max-width">
+		asdfdsf		
+		</div>
+	</div>
 
-			get_template_part( 'template-parts/content', 'page' );
+	<div class="about-header bg-yellow">
+		<div class="max-width">
+		asdfdsf		
+		</div>
+	</div>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+	<div class="about-content">
+		<div class="max-width">
+		asdfdsf		
+		</div>
+	</div>
 
-		endwhile; // End of the loop.
-		?>
+	<div class="team-header bg-green">
+		<div class="max-width">
+		asdfdsf		
+		</div>
+	</div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<div class="team-content">
+		<div class="max-width">
+		asdfdsf		
+		</div>
+	</div>
+
+	<div class="program-header bg-red">
+		<div class="max-width">
+		asdfdsf		
+		</div>
+	</div>
+
+	<div class="program-content">
+		<div class="max-width">
+		asdfdsf		
+		</div>
+	</div>
 
 <?php
 get_footer();

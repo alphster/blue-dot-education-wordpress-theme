@@ -922,19 +922,22 @@ object {
   height: 100%; }
 
 .bg-red {
-  color: #ef5350; }
+  background-color: #ef5350; }
 
 .bg-blue {
-  color: #29B6F6; }
+  background-color: #29B6F6; }
 
 .bg-green {
-  color: #66BB6A; }
+  background-color: #66BB6A; }
 
 .bg-dark {
-  color: #212529; }
+  background-color: #263238; }
+
+.bg-darker {
+  background-color: #212121; }
 
 .bg-yellow {
-  color: #FFEB3B; }
+  background-color: #FFEB3B; }
 
 .admin-bar .site-header {
   top: 32px; }
@@ -945,7 +948,7 @@ object {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #212529;
+  background-color: #263238;
   color: #fff;
   height: 65px;
   -webkit-transition: all 0.2s;
@@ -975,14 +978,75 @@ object {
         color: #fff;
         text-decoration: none; }
 
-.hero-area {
+.site-footer {
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .site-footer h2 {
+    font-size: 24px;
+    font-weight: 700; }
+  .site-footer p {
+    font-size: 20px;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text; }
+  .site-footer .fb {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 50px 0; }
+    .site-footer .fb .fi {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 1px;
+              flex: 1 1 1px;
+      text-align: center; }
+  .site-footer .copyright {
+    font-size: 12px;
+    text-align: center;
+    padding: 25px 0; }
+  .site-footer .social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .site-footer .social-media .circle {
+      border-radius: 50%;
+      border: 2px solid #fff;
+      width: 60px;
+      height: 60px;
+      line-height: 56px;
+      margin: 0 10px;
+      font-size: 22px;
+      -webkit-transition: all .2s;
+      transition: all .2s;
+      color: #fff; }
+      .site-footer .social-media .circle.facebook:hover {
+        border-color: #3b5999;
+        background-color: #3b5999; }
+      .site-footer .social-media .circle.instagram:hover {
+        border-color: #e4405f;
+        background-color: #e4405f; }
+      .site-footer .social-media .circle.twitter:hover {
+        border-color: #55acee;
+        background-color: #55acee; }
+      .site-footer .social-media .circle.linkedin:hover {
+        border-color: #0077B5;
+        background-color: #0077B5; }
+
+.hero-content {
   position: relative;
   height: 100vh;
   min-height: 650px;
   background-size: cover;
   background-image: url("./assets/hero.jpg");
   background-position: center center; }
-  .hero-area .cover {
+  .hero-content .cover {
     position: absolute;
     top: 0;
     bottom: 0;

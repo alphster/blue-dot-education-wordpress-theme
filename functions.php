@@ -122,6 +122,7 @@ add_action( 'widgets_init', 'bde_widgets_init' );
 function bde_scripts() {
 	wp_enqueue_style( 'bde-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:400,700|Permanent+Marker' );
+	wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.0.13/css/all.css');	
 
 	wp_enqueue_script( 'bde-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

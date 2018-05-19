@@ -1,0 +1,58 @@
+.site-footer 
+    color: #fff;
+    user-select: none;
+
+    h2
+        font-size: 24px;
+        font-weight: 700;
+
+    p
+        font-size: 20px;
+        user-select: text;
+
+    .fb
+        width: 100%;
+        display: flex;
+        padding: 50px 0;
+
+        .fi
+            flex: 1 1 1px;
+            text-align: center;            
+    
+    .copyright 
+        font-size: 12px;
+        text-align: center;
+        padding: 25px 0;
+
+    .social-media 
+        display: flex;
+        justify-content: center;
+
+        .circle
+            border-radius: 50%;
+            border: 2px solid #fff;
+            width: 60px;
+            height: 60px;
+            line-height: 56px;        
+            margin: 0 10px;    
+            font-size: 22px;
+            transition: all .2s;
+            color: #fff;
+
+            &.facebook:hover
+                border-color: $facebook-color;
+                background-color: $facebook-color;
+
+            &.instagram:hover
+                border-color: $instagram-color;
+                background-color: $instagram-color;
+
+            &.twitter:hover
+                border-color: $twitter-color;
+                background-color: $twitter-color;
+
+            &.linkedin:hover
+                border-color: $linkedin-color;
+                background-color: $linkedin-color;
+            
+            //margin: 0 auto;            
