@@ -1,0 +1,42 @@
+$logo-size: 45px;
+$logo-size-sm: 40px;
+$height-lg: 125px;
+$height-sm: 65px;
+
+.admin-bar
+    .site-header
+        top: 32px;
+
+
+.site-header
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $bde-dark;
+    color: #fff;
+    height: $height-sm;    
+    transition: all 0.2s;
+
+    &.top
+        background-color: transparent;
+        height: $height-lg;    
+
+    .site-branding
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        margin-left: 10px;
+        .logo
+            margin-right: 10px;
+            background: url("./assets/logo.svg");
+            width: $logo-size;
+            height: $logo-size;
+            background-size: $logo-size $logo-size;
+
+        .site-title
+            margin: 0;
+            a
+                color: #fff;
+                text-decoration: none;

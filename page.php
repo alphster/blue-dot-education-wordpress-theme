@@ -14,6 +14,9 @@
 
 get_header();
 ?>
+	<div class="hero-area">
+		<div class="cover"></div>
+	</div>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -36,5 +39,7 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+if (!is_front_page()) {
+	get_sidebar();
+}
 get_footer();
