@@ -1,9 +1,9 @@
 {
-  "name": "bde",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Ralph N <ralph@n.com>",
-  "license": "MIT",
+	"name": "bde",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "Ralph N <ralph@n.com>",
+	"license": "MIT",
 	"scripts": {
 		"start": "node-sass --include-path scss sass/style.scss style.css --output-style=expanded --indent-type=tab --indent-width=1 --watch=sass",
 		"autoprefixer": "postcss style.css -u autoprefixer -o style.css --no-map",
@@ -25,5 +25,15 @@
 	"browserslist": [
 		"> 1%",
 		"last 2 versions"
-	]
+	],
+	"dependencies": {
+		"ansi-colors": "^2.0.1",
+		"beeper": "^1.1.1",
+		"browser-sync": "^2.24.4",
+		"es6-promise": "^4.2.4",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^5.0.0",
+		"gulp-plumber": "^1.2.0",
+		"gulp-sass": "^4.0.1"
+	}
 }

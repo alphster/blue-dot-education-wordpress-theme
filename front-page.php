@@ -10,7 +10,7 @@
 get_header();
 ?>
 	<div class="hero-area">
-		<div class="cover">asdasdas</div>
+		<div class="cover"></div>
 	</div>
 
 	<div id="primary" class="content-area">
