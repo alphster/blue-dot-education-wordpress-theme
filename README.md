@@ -1,10 +1,10 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
-
 Blue Dot Education Wordpress Theme!
 ===
 
 This theme was created using Underscores as a starting parent theme:
 https://underscores.me/
+
+After setting up a DEV environment (e.g. WAMP, Wordpress, npm, gulp), just run "npm install" followed by "gulp".
 
 Much inspiration came from many bootstrap starter themes (although no bootstrap was used in the final version).
 
