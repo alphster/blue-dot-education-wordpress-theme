@@ -11,15 +11,10 @@
 .bg-blue 
     background-color: $bde-blue;
     color: #fff;
-    div.ray-dot
-        div
-            background-color: #fff !important;
 
 .bg-green
     background-color: $bde-green;    
-    div.ray-dot
-        div:nth-child(2)
-            background-color: #404040 !important;
+    color: #fff;
 
 .bg-dark
     background-color: $bde-dark;
@@ -32,7 +27,14 @@
 .bg-yellow
     background-color: $bde-yellow;
     div.ray-dot
+        div:first-child
+            background-color: #404040 !important;
         div:nth-child(2)
             background-color: #404040 !important;
 
 .bg-none
+    div.ray-dot
+        div:first-child
+            background-color: $bde-blue !important;
+        div:nth-child(2)
+            background-color: $bde-yellow !important;

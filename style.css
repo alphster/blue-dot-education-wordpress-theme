@@ -928,13 +928,10 @@ object {
 .bg-blue {
   background-color: #29B6F6;
   color: #fff; }
-  .bg-blue div.ray-dot div {
-    background-color: #fff !important; }
 
 .bg-green {
-  background-color: #66BB6A; }
-  .bg-green div.ray-dot div:nth-child(2) {
-    background-color: #404040 !important; }
+  background-color: #66BB6A;
+  color: #fff; }
 
 .bg-dark {
   background-color: #263238;
@@ -946,8 +943,16 @@ object {
 
 .bg-yellow {
   background-color: #FFEB3B; }
+  .bg-yellow div.ray-dot div:first-child {
+    background-color: #404040 !important; }
   .bg-yellow div.ray-dot div:nth-child(2) {
     background-color: #404040 !important; }
+
+.bg-none div.ray-dot div:first-child {
+  background-color: #29B6F6 !important; }
+
+.bg-none div.ray-dot div:nth-child(2) {
+  background-color: #FFEB3B !important; }
 
 .admin-bar .site-header {
   top: 32px; }
@@ -1079,7 +1084,8 @@ div.ray-dot {
     width: 19px;
     background-color: #29B6F6;
     border-radius: 50%;
-    z-index: 1; }
+    z-index: 1;
+    background-color: #fff; }
   div.ray-dot div:nth-child(2) {
     position: absolute;
     top: 17px;
@@ -1087,13 +1093,15 @@ div.ray-dot {
     height: 7px;
     width: 100%;
     z-index: 0;
-    border-radius: 5px; }
+    border-radius: 5px;
+    background-color: #fff; }
 
 .section-header > div > div {
   width: 100%;
   text-align: center;
   margin: 60px 0;
-  font-size: 18px; }
+  font-size: 20px; }
   .section-header > div > div .title {
     font-size: 40px;
-    font-family: "Permanent Marker", cursive; }
+    font-family: "Permanent Marker", cursive;
+    letter-spacing: 2px; }

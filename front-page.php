@@ -65,7 +65,7 @@ get_header();
 		<div class="max-width">
 			<div>
 				<div class="title">
-					What have we been up to?
+					Meet the team!
 				</div>
 				<?php divider(); ?>
 				<div>
@@ -85,7 +85,7 @@ get_header();
 		<div class="max-width">
 			<div>
 				<div class="title">
-					What have we been up to?
+					Our programs and projects
 				</div>
 				<?php divider(); ?>
 				<div>
@@ -111,12 +111,6 @@ get_header();
 	</div>
 
 	<div class="contact-content">
-		<div class="max-width">
-
-		</div>
-	</div>
-
-	<div class="program-content">
 		<div class="max-width">
 
 		</div>
