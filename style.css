@@ -587,7 +587,13 @@ a {
         -webkit-transition: color .2s;
         transition: color .2s; }
         .main-navigation ul li a:hover {
-          color: #ef5350; }
+          color: #29B6F6; }
+    .main-navigation ul li:nth-child(2) > a:hover {
+      color: #66BB6A; }
+    .main-navigation ul li:nth-child(3) > a:hover {
+      color: #ef5350; }
+    .main-navigation ul li:nth-child(4) > a:hover {
+      color: #FFEB3B; }
   @media screen and (min-width: 800px) {
     .main-navigation {
       /*.main-navigation ul {
@@ -1056,11 +1062,14 @@ object {
         border-color: #e4405f;
         background-color: #e4405f; }
       .site-footer .social-media .circle.twitter:hover {
-        border-color: #55acee;
-        background-color: #55acee; }
+        border-color: #1da1f2;
+        background-color: #1da1f2; }
       .site-footer .social-media .circle.linkedin:hover {
         border-color: #0077B5;
         background-color: #0077B5; }
+      .site-footer .social-media .circle.github:hover {
+        background-color: #fff;
+        color: #263238; }
 
 .hero-content {
   position: relative;

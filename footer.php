@@ -16,12 +16,8 @@
 		<div class="max-width">
 			<div class="fb">
 				<div class="fi">
-					<h2>MAIL TO</h2>
-					<p>
-						P.O. Box 72982<br />
-						San Diego, CA 92109
-					</p>
-				</div>
+					<div class="logo" alt="logo"></div>
+				</div>	
 				<div class="fi">
 					<h2>FIND US AROUND THE WEB</h2>
 					<div class="social-media">
@@ -36,12 +32,18 @@
 						</a>						
 						<a class="circle linkedin" href="https://linkedin.com">
 							<i class="fab fa-linkedin-in"></i>
+						</a>	
+						<a class="circle github" href="https://github.com/alphster/blue-dot-education-wordpress-theme">
+							<i class="fab fa-github"></i>
 						</a>						
 					</div>
 				</div>		
 				<div class="fi">
-					<h2>TODO</h2>
-					<p></p>
+					<h2>MAIL TO</h2>
+					<p>
+						P.O. Box 72982<br />
+						San Diego, CA 92109
+					</p>
 				</div>			
 			</div>
 		</div>

@@ -21,12 +21,21 @@
 				transition: color .2s;
 
 				&:hover {					
-                    color: $bde-red;
+                    color: $bde-blue;
 				}
-			}
+			}	
+		}
+		li:nth-child(2) > a:hover {
+			color: $bde-green;
 		}
 
-	
+		li:nth-child(3) > a:hover {
+			color: $bde-red;
+		}
+
+		li:nth-child(4) > a:hover {
+			color: $bde-yellow;
+		}	
 	}
 
 	@media screen and (min-width: 800px) {
@@ -37,6 +46,8 @@
 			display: block;
 		}*/
 	}
+
+
 }
 
 /*
