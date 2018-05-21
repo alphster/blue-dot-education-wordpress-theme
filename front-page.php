@@ -11,6 +11,33 @@ function divider() {
 	echo "<div class=\"ray-dot\"><div></div><div></div></div>";
 }
 
+class CoreValue {
+    public $foo;
+    public $bar;
+}
+
+$obj1 = new CoreValue();
+$obj1->icon = 'fas fa-flask';
+$obj1->title = 'Science';
+$obj1->text = 'By focusing our work around science & technology, we foster sharp minds.';
+
+$obj2 = new CoreValue();
+$obj2->icon = 'fas fa-rocket';
+$obj2->title = 'Exploration';
+$obj2->text = 'Education works best when students are inspired by interests and passions.';
+
+$obj3 = new CoreValue();
+$obj3->icon = 'fas fa-leaf';
+$obj3->title = 'Stewardship';
+$obj3->text = 'Let\'s learn and clean up the earth while we\'re at it.';
+
+$obj4 = new CoreValue();
+$obj4->icon = 'fas fa-star';
+$obj4->title = 'Success?';
+$obj4->text = 'Something about success or achievement. Wanted to use yellow.';
+
+$coreValues = array($obj1, $obj2, $obj3, $obj4);
+
 get_header();
 ?>
 	<div class="hero-content">
@@ -27,17 +54,25 @@ get_header();
 					What are we about?
 				</div>
 				<?php divider(); ?>
-				<p>
+				<div>
 					These are the things that makes Blue Dot Education tick. Something said about overall mission and goals. Lorem ipsum dolor
 					sit amet, cum no placerat antiopam dignissim, vis eu vide natum partiendo, est postea reprimique no. Cu vis mollis vituperatoribus.
-				</p>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="intro-content">
+	<div class="intro-content section-content">
 		<div class="max-width">
-
+		<?php 
+			foreach($coreValues as $value) { echo "
+				<div class='core-value'>
+					<div class='icon'><i class='{$value->icon}'></i></div>
+					<div class='title'>{$value->title}</div>
+					<div class='text'>{$value->text}</div>
+				</div>";
+			}
+		?>
 		</div>
 	</div>
 
@@ -55,7 +90,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="news-content">
+	<div class="news-content section-content">
 		<div class="max-width">
 
 		</div>
@@ -69,13 +104,13 @@ get_header();
 				</div>
 				<?php divider(); ?>
 				<div>
-					Catch up with Blue Dot Education! Read our latest posts or browse our photos on instagram.
+					
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="team-content">
+	<div class="team-content section-content">
 		<div class="max-width">
 
 		</div>
@@ -103,14 +138,13 @@ get_header();
 				</div>
 				<?php divider(); ?>
 				<div>
-					These are the things that makes Blue Dot Education tick. Something said about overall mission and goals. Lorem ipsum dolor
-					sit amet, cum no placerat antiopam dignissim, vis eu vide natum partiendo, est postea reprimique no. Cu vis mollis vituperatoribus.
+					We're always excited to hear from you! Let us know the best time and method to reach you by filling out the form below.
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="contact-content">
+	<div class="contact-content section-content">
 		<div class="max-width">
 
 		</div>

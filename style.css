@@ -41,6 +41,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+/*$bde-red: #ef5350;
+$bde-blue: #29B6F6;
+$bde-green: #66BB6A;
+$bde-yellow: #FFEB3B;*/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -930,8 +934,11 @@ object {
   color: #fff; }
 
 .bg-green {
-  background-color: #66BB6A;
-  color: #fff; }
+  background-color: #66BB6A; }
+  .bg-green div.ray-dot div:first-child {
+    background-color: #404040 !important; }
+  .bg-green div.ray-dot div:nth-child(2) {
+    background-color: #404040 !important; }
 
 .bg-dark {
   background-color: #263238;
@@ -1070,15 +1077,28 @@ object {
     right: 0;
     background-color: rgba(0, 0, 0, 0.5); }
 
+.section-header > div > div {
+  width: 100%;
+  text-align: center;
+  margin: 60px 0;
+  font-size: 20px; }
+  .section-header > div > div .title {
+    font-size: 44px;
+    font-family: "Permanent Marker", cursive;
+    letter-spacing: 2px; }
+
+.section-content > div > div {
+  margin-bottom: 60px; }
+
 div.ray-dot {
   position: relative;
   margin: 0 auto;
-  height: 40px;
+  height: 60px;
   width: 100px;
   display: block; }
   div.ray-dot div:first-child {
     position: absolute;
-    top: 11px;
+    top: 20px;
     right: 20%;
     height: 19px;
     width: 19px;
@@ -1088,7 +1108,7 @@ div.ray-dot {
     background-color: #fff; }
   div.ray-dot div:nth-child(2) {
     position: absolute;
-    top: 17px;
+    top: 26px;
     background-color: #FFEB3B;
     height: 7px;
     width: 100%;
@@ -1096,12 +1116,26 @@ div.ray-dot {
     border-radius: 5px;
     background-color: #fff; }
 
-.section-header > div > div {
-  width: 100%;
+.intro-content > div > div.core-value {
   text-align: center;
-  margin: 60px 0;
-  font-size: 20px; }
-  .section-header > div > div .title {
-    font-size: 40px;
+  padding: 0 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 1px;
+          flex: 1 1 1px; }
+  .intro-content > div > div.core-value .title {
     font-family: "Permanent Marker", cursive;
-    letter-spacing: 2px; }
+    letter-spacing: 1px;
+    font-size: 28px;
+    margin: 15px 0; }
+  .intro-content > div > div.core-value .text {
+    font-style: italic; }
+  .intro-content > div > div.core-value i {
+    font-size: 64px; }
+    .intro-content > div > div.core-value i.fa-flask {
+      color: #29B6F6; }
+    .intro-content > div > div.core-value i.fa-rocket {
+      color: #ef5350; }
+    .intro-content > div > div.core-value i.fa-leaf {
+      color: #66BB6A; }
+    .intro-content > div > div.core-value i.fa-star {
+      color: #FFEB3B; }
