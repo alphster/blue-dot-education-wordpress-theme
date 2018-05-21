@@ -1,0 +1,38 @@
+$fun-font: 'Permanent Marker', cursive;
+
+div.ray-dot
+    position: relative;    
+    margin: 0 auto;    
+    height: 40px;
+    width: 100px;
+    display: block;
+    div:first-child       
+        position: absolute;
+        top: 11px;
+        right: 20%;
+        height: 19px;
+        width: 19px;
+        background-color: $bde-blue;
+        border-radius: 50%;            
+        z-index: 1;
+
+    div:nth-child(2)
+        position: absolute;
+        top: 17px;
+        background-color: $bde-yellow;
+        height: 7px;          
+        width: 100%;
+        z-index: 2;
+        border-radius: 5px;        
+
+.section-header
+    > div
+        > div            
+            width: 100%;
+            text-align: center;
+            margin: 60px 0;
+            font-size: 18px;                            
+
+            .title
+                font-size: 40px;
+                font-family: $fun-font;

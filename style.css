@@ -922,22 +922,31 @@ object {
   height: 100%; }
 
 .bg-red {
-  background-color: #ef5350; }
+  background-color: #ef5350;
+  color: #fff; }
 
 .bg-blue {
-  background-color: #29B6F6; }
+  background-color: #29B6F6;
+  color: #fff; }
+  .bg-blue div.ray-dot div {
+    background-color: #fff !important; }
 
 .bg-green {
-  background-color: #66BB6A; }
+  background-color: #66BB6A;
+  color: #fff; }
 
 .bg-dark {
-  background-color: #263238; }
+  background-color: #263238;
+  color: #fff; }
 
 .bg-darker {
-  background-color: #212121; }
+  background-color: #212121;
+  color: #fff; }
 
 .bg-yellow {
   background-color: #FFEB3B; }
+  .bg-yellow div.ray-dot div:nth-child(2) {
+    background-color: #404040 !important; }
 
 .admin-bar .site-header {
   top: 32px; }
@@ -952,7 +961,8 @@ object {
   color: #fff;
   height: 65px;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  z-index: 3; }
   .site-header.top {
     background-color: transparent;
     height: 125px; }
@@ -1053,3 +1063,36 @@ object {
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5); }
+
+div.ray-dot {
+  position: relative;
+  margin: 0 auto;
+  height: 40px;
+  width: 100px;
+  display: block; }
+  div.ray-dot div:first-child {
+    position: absolute;
+    top: 11px;
+    right: 20%;
+    height: 19px;
+    width: 19px;
+    background-color: #29B6F6;
+    border-radius: 50%;
+    z-index: 1; }
+  div.ray-dot div:nth-child(2) {
+    position: absolute;
+    top: 17px;
+    background-color: #FFEB3B;
+    height: 7px;
+    width: 100%;
+    z-index: 2;
+    border-radius: 5px; }
+
+.section-header > div > div {
+  width: 100%;
+  text-align: center;
+  margin: 60px 0;
+  font-size: 18px; }
+  .section-header > div > div .title {
+    font-size: 40px;
+    font-family: "Permanent Marker", cursive; }

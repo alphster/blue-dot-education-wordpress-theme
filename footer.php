@@ -46,7 +46,7 @@
 			</div>
 		</div>
 		<div class="copyright bg-darker">
-			Copyright &copy; BlueDotEducation.org <?php echo date("Y"); ?>
+			Copyright <i class="far fa-copyright"></i> BlueDotEducation.org <?php echo date("Y"); ?>
 		</div>
 	</div>
 
