@@ -47,7 +47,58 @@ get_header();
 		</div>
 	</div>
 
-	<div class="intro-header section-header bg-none">
+	<div class="news-header section-header bg-none">
+		<div class="max-width">
+			<div>
+				<div class="title">					
+					Latest News
+				</div>
+				<?php divider(); ?>		
+				<div>
+					Catch up with our latest posts, or check out our instagram gallery.
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<div class="news-content section-content bg-none">
+		<div class="max-width">
+			<div class="recent-posts">
+			<?php
+				$args = array( 
+					'numberposts' => '8',
+					'post_status' => 'publish'
+				);
+				$recent_posts = wp_get_recent_posts( $args );
+				foreach( $recent_posts as $recent ){					
+					$recent_post_id = $recent["ID"];
+					$recent_post_date = $recent["post_date"];					
+					$recent_post_title = $recent["post_title"];
+					$formatted_date = date('l, F j, Y', strtotime($recent_post_date));					
+					if ( has_post_thumbnail( $recent["ID"]) ) {
+						$featured_image_url = get_the_post_thumbnail_url($recent_post_id, 'medium_large');
+					}
+					
+					echo '
+						<div class="post">							
+							<div class="date">'.$formatted_date.'</div>		
+							<a class="link-wrapper" href="'.get_permalink($recent_post_id).'">			
+								<div class="image">																
+									<img src="'.get_template_directory_uri().'/assets/4by3pixels.png" />
+									<div class="bg-image" style="background-image: url(\''.$featured_image_url.'\')"></div>
+									<div class="cover"></div>
+								</div>
+							</a>
+							<div class="title">'.$recent_post_title.'</div>							
+						</div>';
+				}
+				wp_reset_query();
+			?>
+			</div>
+		</div>
+	</div>
+
+	<div class="about-header section-header bg-blue">
 		<div class="max-width">
 			<div>
 				<div class="title">
@@ -62,7 +113,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="intro-content section-content">
+	<div class="about-content section-content">
 		<div class="max-width">
 		<?php 
 			foreach($coreValues as $value) { echo "
@@ -73,26 +124,6 @@ get_header();
 				</div>";
 			}
 		?>
-		</div>
-	</div>
-
-	<div class="news-header section-header bg-blue">
-		<div class="max-width">
-			<div>
-				<div class="title">
-					What have we been up to?
-				</div>
-				<?php divider(); ?>
-				<div>
-					Catch up with Blue Dot Education! Read our latest posts or browse our photos on instagram.
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="news-content section-content">
-		<div class="max-width">
-
 		</div>
 	</div>	
 
