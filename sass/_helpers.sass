@@ -1,3 +1,5 @@
+$fun-font: 'Permanent Marker', cursive;
+    
 .max-width
     max-width: 1200px;
     margin: 0 auto;
@@ -6,39 +8,87 @@
 
 .bg-red
     background-color: $bde-red;
-    color: #fff;
+    //color: #fff;
+    //color: #222;
 
 .bg-blue 
     background-color: $bde-blue;
-    color: #fff;
+    //color: #fff;
+    //color: #222;
 
 .bg-green
     background-color: $bde-green;    
+    //color: #222;
     //color: #fff;
-    div.ray-dot
-        div:first-child
-            background-color: #404040 !important;
-        div:nth-child(2)
-            background-color: #404040 !important;
+    //div.ray-dot
+    //    div:first-child
+    //        background-color: $bde-blue !important;
+    //        border: 1px solid #222;
+    //    div:nth-child(2)
+    //        background-color: #222 !important;
+    
 
 .bg-dark
-    background-color: $bde-dark;
-    color: #fff;
+    background-color: $bde-dark;    
 
 .bg-darker
-    background-color: $bde-darker;
-    color: #fff;
+    background-color: $bde-darker;    
 
 .bg-yellow
     background-color: $bde-yellow;
-    div.ray-dot
-        div:first-child
-            background-color: #404040 !important;
-        div:nth-child(2)
-            background-color: #404040 !important;
+    //color: #222;
+    //div.ray-dot
+    //    div:first-child
+    //        background-color: $bde-blue !important;
+    //    div:nth-child(2)
+    //        background-color: #222 !important;    
 
 .bg-none
-    div.ray-dot
+    color: inherit !important;
+
+.section-header
+    box-shadow: 0px 5px 25px #404040;
+    color: #333;
+    > div
+        > div            
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 20px;                                    
+
+            .title
+                font-size: 44px;
+                font-family: $fun-font;
+                letter-spacing: 2px;        
+
+div.ray-dot
+    position: relative;    
+    margin: 0 auto;    
+    height: 60px;
+    width: 100px;
+    display: block;    
+    div:first-child       
+        position: absolute;
+        top: 20px;
+        right: 20%;
+        height: 19px;
+        width: 19px;
+        background-color: #333;        
+        border-radius: 50%;            
+        z-index: 1;
+        //background-color: #fff;        
+
+    div:nth-child(2)
+        position: absolute;
+        top: 26px;
+        background-color: #333;               
+        height: 7px;          
+        width: 100%;
+        z-index: 0;
+        border-radius: 5px;        
+        //background-color: #fff;    
+
+    &.colored
         div:first-child
             background-color: $bde-blue !important;
         div:nth-child(2)

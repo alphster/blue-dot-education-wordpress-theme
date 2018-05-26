@@ -7,8 +7,8 @@
  * @package bde
  */
 
-function divider() {
-	echo "<div class=\"ray-dot\"><div></div><div></div></div>";
+function divider($className = "") {
+	echo "<div class=\"ray-dot $className\"><div></div><div></div></div>";
 }
 
 class CoreValue {
@@ -43,7 +43,18 @@ get_header();
 	<div class="hero-content">
 		<div class="cover"></div>
 		<div class="max-width">
-
+			<div class="content">
+				<div class="text1">
+					WE ARE ENHANCING EDUCATION THROUGH EXPERIENCES
+				</div>
+				<?php divider("colored"); ?>
+				<div class="text2">
+					A thoughtful follow up blurb immediately following the large and prominent statement about how you are a non profit trying to make a splash in the education space by stating what Blue Dot Education does, in a nutshell.
+				</div>
+				<div class="down-button">
+					<i class="fas fa-angle-double-down"></i>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -53,7 +64,7 @@ get_header();
 				<div class="title">					
 					Latest News
 				</div>
-				<?php divider(); ?>		
+				<?php divider("colored"); ?>		
 				<div>
 					Catch up with our latest posts, or check out our instagram gallery.
 				</div>		

@@ -16,7 +16,9 @@
 		<div class="max-width">
 			<div class="fb">
 				<div class="fi">
-					<div class="logo" alt="logo"></div>
+					<div class="logo"></div>
+					<!--<div><a href="#">Privacy Policy</a></div>
+					<div><a href="#">Terms of Use</a></div>-->			
 				</div>	
 				<div class="fi">
 					<h2>FIND US AROUND THE WEB</h2>
@@ -47,8 +49,8 @@
 				</div>			
 			</div>
 		</div>
-		<div class="copyright bg-darker">
-			Copyright <i class="far fa-copyright"></i> BlueDotEducation.org <?php echo date("Y"); ?>
+		<div class="copyright bg-darker">			
+			Copyright <i class="far fa-copyright"></i> BlueDotEducation.org <?php echo date("Y"); ?>			
 		</div>
 	</div>
 

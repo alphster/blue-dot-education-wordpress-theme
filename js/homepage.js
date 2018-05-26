@@ -17,12 +17,23 @@
         origin: 'left',
         distance: '75px',
         duration: 1000,
-        delay: 100
+        delay: 300
     });
-    sr.reveal('.intro-content .icon', {
+    sr.reveal('.about-content .icon', {
         duration: 600,
-        delay: 100,
+        delay: 500,
         scale: 0.3,
         distance: '0px'
     }, 200);
+    sr.reveal('.news-content .post', {
+        duration: 500,
+        delay: 100,
+        distance: '100px',
+        origin: 'bottom',
+        opacity: 0,
+        scale: 1,
+        reset: false
+        //scale: 0.3,
+        //distance: '0px'
+    }, 150);
 })(jQuery);
