@@ -586,13 +586,13 @@ a {
         text-decoration: none;
         -webkit-transition: color .2s;
         transition: color .2s; }
-        .main-navigation ul li a:hover {
-          color: #29B6F6; }
-    .main-navigation ul li:nth-child(2) > a:hover {
+    .main-navigation ul.item-1-active li:first-child > a, .main-navigation ul li:first-child > a:hover {
+      color: #29B6F6; }
+    .main-navigation ul.item-2-active li:nth-child(2) > a, .main-navigation ul li:nth-child(2) > a:hover {
       color: #66BB6A; }
-    .main-navigation ul li:nth-child(3) > a:hover {
+    .main-navigation ul.item-3-active li:nth-child(3) > a, .main-navigation ul li:nth-child(3) > a:hover {
       color: #ef5350; }
-    .main-navigation ul li:nth-child(4) > a:hover {
+    .main-navigation ul.item-4-active li:nth-child(4) > a, .main-navigation ul li:nth-child(4) > a:hover {
       color: #FFEB3B; }
   @media screen and (min-width: 800px) {
     .main-navigation {
@@ -1110,7 +1110,6 @@ div.ray-dot {
 .hero-content {
   position: relative;
   height: 850px;
-  max-height: 100vh;
   background-size: cover;
   background-image: url("./assets/hero.jpg");
   background-position: center center;

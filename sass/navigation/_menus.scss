@@ -19,21 +19,22 @@
 				color: #fff;				
 				text-decoration: none;
 				transition: color .2s;
-
-				&:hover {					
-                    color: $bde-blue;
-				}
 			}	
 		}
-		li:nth-child(2) > a:hover {
+		
+		&.item-1-active li:first-child > a, li:first-child > a:hover {
+			color: $bde-blue;
+		}
+
+		&.item-2-active li:nth-child(2) > a, li:nth-child(2) > a:hover {
 			color: $bde-green;
 		}
 
-		li:nth-child(3) > a:hover {
+		&.item-3-active  li:nth-child(3) > a, li:nth-child(3) > a:hover {
 			color: $bde-red;
 		}
 
-		li:nth-child(4) > a:hover {
+		&.item-4-active  li:nth-child(4) > a, li:nth-child(4) > a:hover {
 			color: $bde-yellow;
 		}	
 	}
