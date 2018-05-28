@@ -60,7 +60,7 @@ get_header();
 	</div>
 	
 	<div id="section-menu-1">
-		<div id class="news-header section-header bg-none">
+		<div class="news-header section-header bg-none">
 			<div class="max-width">
 				<div>
 					<div class="title">
