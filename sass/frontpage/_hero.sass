@@ -1,14 +1,12 @@
 .hero-content
     position: relative;    
-    height: 850px;    
+    height: 450px;    
     background-size: cover;
     background-image: url('./assets/hero.jpg');
     background-position: center center;
     box-shadow: 0px 5px 15px #404040;
     color: #fff;
-
-    .max-width
-        flex-direction: 
+    min-height: 50vh;    
 
     .cover
         position: absolute;
@@ -16,13 +14,42 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0,0,0, .65);
 
     .content
-        z-index: 1;
-        margin: auto auto;
-        text-align: center;
-        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        //border: 1px solid red;
+
+        .row2
+            flex: 0 0 100px;
+            //border: 1px solid blue;
+
+        .row1
+            z-index: 1;
+            margin: 0 auto;
+            //border: 1px solid green;
+            flex-grow: 1;
+            display: flex;            
+            align-items: center;
+            text-align: center;
+
+            .logo-and-text
+                display: flex;
+                flex-direction: column;
+
+                $logo-size: 75px;
+                .logo
+                    width: $logo-size;
+                    height: $logo-size;
+                    background-size: $logo-size $logo-size;
+
+                .site-title
+                    font-size: 42px;
+
+
         .text1
             font-size: 58px;
             font-weight: 700;

@@ -21,7 +21,7 @@
 
     // Collapse Navbar
     var navbarCollapse = function () {
-        if ($("#masthead").offset().top > 32) {
+        if ($("#masthead").offset().top > 400) {
             $("#masthead").removeClass("top");
         } else {
             $("#masthead").addClass("top");

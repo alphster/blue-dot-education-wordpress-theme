@@ -23,28 +23,58 @@
 				<div class="fi">
 					<h2>FIND US AROUND THE WEB</h2>
 					<div class="social-media">
-						<a class="circle twitter" href="https://twitter.com">
-							<i class="fab fa-twitter"></i>
-						</a>
-						<a class="circle instagram" href="https://instagram.com">
-							<i class="fab fa-instagram"></i>
-						</a>												
-						<a class="circle facebook" href="https://facebook.com">
-							<i class="fab fa-facebook-f"></i>
-						</a>						
-						<a class="circle linkedin" href="https://linkedin.com">
-							<i class="fab fa-linkedin-in"></i>
-						</a>	
-						<a class="circle github" href="https://github.com/alphster/blue-dot-education-wordpress-theme">
-							<i class="fab fa-github"></i>
-						</a>						
+						<?php 
+						$option = get_theme_mod('url_twitter', '');
+						if (!empty($option)) {
+							echo '
+								<a class="circle twitter" href="'.$option.'">
+									<i class="fab fa-twitter"></i>
+								</a>';
+						}
+						$option = get_theme_mod('url_instagram', '');
+						if (!empty($option)) {
+							echo '
+							<a class="circle instagram" href="'.$option.'">
+								<i class="fab fa-instagram"></i>
+							</a>';	
+						}
+						$option = get_theme_mod('url_facebook', '');
+						if (!empty($option)) {
+							echo '
+							<a class="circle facebook" href="'.$option.'">
+								<i class="fab fa-facebook-f"></i>
+							</a>';
+						}
+						$option = get_theme_mod('url_linkedin', '');
+						if (!empty($option)) {
+							echo '
+							<a class="circle linkedin" href="'.$option.'">
+								<i class="fab fa-linkedin-in"></i>
+							</a>';
+						}
+						$option = get_theme_mod('url_github', 'https://github.com/alphster/blue-dot-education-wordpress-theme');
+						if (!empty($option)) {
+							echo '
+							<a class="circle github" href="'.$option.'">
+								<i class="fab fa-github"></i>
+							</a>';
+						}
+						?>					
 					</div>
 				</div>		
 				<div class="fi">
 					<h2>MAIL TO</h2>
 					<p>
-						P.O. Box 72982<br />
-						San Diego, CA 92109
+						<?php 
+						$option1 = get_theme_mod('bde_address1', 'P.O. Box 123456');
+						$option2 = get_theme_mod('bde_address2', 'San Diego, CA 92109');
+						if (!empty($option1)) {
+							echo $option1;
+						}
+						if (!empty($option2)) {
+							echo '<br />'.$option2;
+						}
+						?>
 					</p>
 				</div>			
 			</div>

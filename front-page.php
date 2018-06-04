@@ -16,25 +16,31 @@ class CoreValue {
     public $bar;
 }
 
+$lorips = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+
 $obj1 = new CoreValue();
-$obj1->icon = 'fas fa-flask';
-$obj1->title = 'Science';
-$obj1->text = 'By focusing our work around science & technology, we foster sharp minds.';
+$obj1->icon = get_theme_mod('core_value_icon1', 'fas fa-flask');
+$obj1->title = get_theme_mod('core_value_title1', 'Science');
+$obj1->color = get_theme_mod('core_value_color1', '#29B6F6');
+$obj1->text = get_theme_mod('core_value_text1', $lorips);
 
 $obj2 = new CoreValue();
-$obj2->icon = 'fas fa-rocket';
-$obj2->title = 'Exploration';
-$obj2->text = 'Education works best when students are inspired by interests and passions.';
+$obj2->icon = get_theme_mod('core_value_icon2', 'fas fa-rocket');
+$obj2->title = get_theme_mod('core_value_title2', 'Exploration');
+$obj2->color = get_theme_mod('core_value_color2', '#EF5350');
+$obj2->text = get_theme_mod('core_value_text2', $lorips);
 
 $obj3 = new CoreValue();
-$obj3->icon = 'fas fa-leaf';
-$obj3->title = 'Stewardship';
-$obj3->text = 'Let\'s learn and clean up the earth while we\'re at it.';
+$obj3->icon = get_theme_mod('core_value_icon3', 'fas fa-leaf');
+$obj3->title = get_theme_mod('core_value_title3', 'Stewardship');
+$obj3->color = get_theme_mod('core_value_color3', '#66BB6A');
+$obj3->text = get_theme_mod('core_value_text3', $lorips);
 
 $obj4 = new CoreValue();
-$obj4->icon = 'fas fa-star';
-$obj4->title = 'Success?';
-$obj4->text = 'Something about success or achievement. Wanted to use yellow.';
+$obj4->icon = get_theme_mod('core_value_icon4', 'fas fa-star');
+$obj4->title = get_theme_mod('core_value_title4', 'Something');
+$obj4->color = get_theme_mod('core_value_color4', '#FFEB3B');
+$obj4->text = get_theme_mod('core_value_text4', $lorips);
 
 $coreValues = array($obj1, $obj2, $obj3, $obj4);
 
@@ -44,23 +50,42 @@ get_header();
 		<div class="cover"></div>
 		<div class="max-width">
 			<div class="content">
-				<div class="text1">
-					WE ARE ENHANCING EDUCATION THROUGH EXPERIENCES
+				<div class="row1">
+					<div class="logo-and-text">
+						<div class="site-branding">		
+							<div class="logo" alt="logo"></div>
+							<div class="site-title">
+								<?php bloginfo( 'name' ); ?>
+								<div class="sub-text">Enhancing Education through Experiences.</div>
+							</div>			
+						</div><!-- .site-branding -->						
+						
+					</div>
+				</div>
+				<div class="row2"></div>
+				<?php /*<div class="text1">
+					<?php
+					$option1 = get_theme_mod('text_call_to_action', 'WE ARE ENHANCING EDUCATION THROUGH EXPERIENCES');					
+					echo $option1;
+					?>					
 				</div>
 				<?php divider("colored"); ?>
 				<div class="text2">
-					A thoughtful follow up blurb immediately following the large and prominent statement about how you are a non profit trying
-					to make a splash in the education space by stating what Blue Dot Education does, in a nutshell.
+					<?php
+					$option2 = get_theme_mod('text_call_to_action2', $lorips);					
+					echo $option2;					
+					?>		
 				</div>
 				<div class="down-button">
 					<i class="fas fa-angle-double-down"></i>
 				</div>
+				*/?>
 			</div>
 		</div>
 	</div>
 	
 	<div id="section-menu-1">
-		<div class="news-header section-header bg-none">
+		<?php /*<div class="news-header section-header bg-none">
 			<div class="max-width">
 				<div>
 					<div class="title">
@@ -70,39 +95,52 @@ get_header();
 					<div>
 						Catch up with our latest posts, or check out our instagram gallery.
 					</div>
-				</div>
+				</div>				
 			</div>
 		</div>
-
+		*/?>
 		<div class="news-content section-content bg-none">
 			<div class="max-width">
 				<div class="recent-posts">
 					<?php
 					$args = array( 
-						'numberposts' => '8',
+						'numberposts' => '6',
 						'post_status' => 'publish'
 					);
 					$recent_posts = wp_get_recent_posts( $args );
 					foreach( $recent_posts as $recent ){					
 						$recent_post_id = $recent["ID"];
 						$recent_post_date = $recent["post_date"];					
-						$recent_post_title = $recent["post_title"];
-						$formatted_date = date('l, F j, Y', strtotime($recent_post_date));					
+						$recent_post_title = $recent["post_title"];	
+						$recent_post_excerpt = wp_trim_words( $recent["post_content"], $num_words = 33);
+						$formatted_date = date('l, F j, Y', strtotime($recent_post_date));	
+						$recent_author_id = $recent["post_author"];
+						$recent_author_image = get_avatar_url( $recent_author_id );
+						$recent_author = get_user_by( 'ID', $recent_author_id );
+
 						if ( has_post_thumbnail( $recent["ID"]) ) {
 							$featured_image_url = get_the_post_thumbnail_url($recent_post_id, 'medium_large');
 						}
 						
 						echo '
-							<div class="post">							
-								<div class="date">'.$formatted_date.'</div>		
-								<a class="link-wrapper" href="'.get_permalink($recent_post_id).'">			
-									<div class="image">																
-										<img src="'.get_template_directory_uri().'/assets/4by3pixels.png" />
-										<div class="bg-image" style="background-image: url(\''.$featured_image_url.'\')"></div>
-										<div class="cover"></div>
-									</div>
-								</a>
-								<div class="title">'.$recent_post_title.'</div>							
+							<div class="post">																
+								<div class="post-inner">			
+									<a href="'.get_permalink($recent_post_id).'">
+										<div class="image">																
+											<img src="'.get_template_directory_uri().'/assets/4by3pixels.png" />
+											<div class="bg-image" style="background-image: url(\''.$featured_image_url.'\')"></div>																			
+										</div>																													
+										<div class="content">
+											<div class="date">'.$formatted_date.'</div>		
+											<div class="title">'.$recent_post_title.'</div>																		
+											<div class="excerpt">'.$recent_post_excerpt.'</div>
+											<div class="author">												
+												<div class="author-image" style="background-image: url(\''.$recent_author_image.'\')"></div>
+												<div class="author-name">'.$recent_author->display_name.'</div>												
+											</div>											
+										</div>
+									</a>
+								</div>								
 							</div>';
 					}
 					wp_reset_query();
@@ -148,8 +186,8 @@ get_header();
 						Meet the team!
 					</div>
 					<?php divider(); ?>
-					<div>
-
+					<div>					
+						
 					</div>
 				</div>
 			</div>
@@ -157,7 +195,11 @@ get_header();
 
 		<div class="team-content section-content">
 			<div class="max-width">
+				<div class="team-holder">
+					<div class="person-outer">
 
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
