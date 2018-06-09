@@ -56,13 +56,25 @@ get_header();
 							<div class="logo" alt="logo"></div>
 							<div class="site-title">
 								<?php bloginfo( 'name' ); ?>
-								<div class="sub-text">Enhancing Education through Experiences.</div>
+								<div class="sub-text">Enhancing Education through Experiences.</div>								
 							</div>			
+							
 						</div><!-- .site-branding -->						
+						<?php divider("colored"); ?>
+						<?php include('_social_media.php') ?>
 						
 					</div>
 				</div>
-				<div class="row2"></div>
+				<?php /*<div class="row2">					
+					<div class="main-navigation">
+						<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+						 ?>
+					</div>
+				</div>*/ ?>
 				<?php /*<div class="text1">
 					<?php
 					$option1 = get_theme_mod('text_call_to_action', 'WE ARE ENHANCING EDUCATION THROUGH EXPERIENCES');					

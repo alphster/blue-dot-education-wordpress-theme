@@ -424,8 +424,7 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */
-  background-color: #ECEFF1; }
+  /* Fallback for when there is no custom background color defined. */ }
 
 hr {
   background-color: #ccc;
@@ -1012,9 +1011,14 @@ div.ray-dot {
   z-index: 3;
   opacity: 1; }
   .site-header.top {
-    opacity: 0; }
+    background-color: inherit; }
+    .site-header.top .site-branding {
+      opacity: 0; }
 
 .site-branding {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1079,41 +1083,43 @@ div.ray-dot {
     font-size: 12px;
     text-align: center;
     padding: 25px 0; }
-  .site-footer .social-media {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    .site-footer .social-media .circle {
-      border-radius: 50%;
-      border: 2px solid #fff;
-      width: 60px;
-      height: 60px;
-      line-height: 56px;
-      margin: 0 10px;
-      font-size: 26px;
-      -webkit-transition: all .2s;
-      transition: all .2s;
-      color: #fff; }
-      .site-footer .social-media .circle.facebook:hover {
-        border-color: #3b5999;
-        background-color: #3b5999; }
-      .site-footer .social-media .circle.instagram:hover {
-        border-color: #e4405f;
-        background-color: #e4405f; }
-      .site-footer .social-media .circle.twitter:hover {
-        border-color: #1da1f2;
-        background-color: #1da1f2; }
-      .site-footer .social-media .circle.linkedin:hover {
-        border-color: #0077B5;
-        background-color: #0077B5; }
-      .site-footer .social-media .circle.github:hover {
-        background-color: #fff;
-        color: #263238; }
-      .site-footer .social-media .circle.github {
-        font-size: 34px; }
+
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center; }
+  .social-media .circle {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    width: 60px;
+    height: 60px;
+    line-height: 56px;
+    margin: 0 10px;
+    font-size: 26px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    color: #fff; }
+    .social-media .circle.facebook:hover {
+      border-color: #3b5999;
+      background-color: #3b5999; }
+    .social-media .circle.instagram:hover {
+      border-color: #e4405f;
+      background-color: #e4405f; }
+    .social-media .circle.twitter:hover {
+      border-color: #1da1f2;
+      background-color: #1da1f2; }
+    .social-media .circle.linkedin:hover {
+      border-color: #0077B5;
+      background-color: #0077B5; }
+    .social-media .circle.github:hover {
+      background-color: #fff;
+      color: #263238; }
+    .social-media .circle.github {
+      font-size: 34px; }
 
 .hero-content {
   position: relative;
@@ -1121,8 +1127,6 @@ div.ray-dot {
   background-size: cover;
   background-image: url("./assets/hero.jpg");
   background-position: center center;
-  -webkit-box-shadow: 0px 5px 15px #404040;
-          box-shadow: 0px 5px 15px #404040;
   color: #fff;
   min-height: 50vh; }
   .hero-content .cover {
@@ -1141,11 +1145,10 @@ div.ray-dot {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
-    .hero-content .content .row2 {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 100px;
-              flex: 0 0 100px; }
+            flex-direction: column;
+    /*.row2
+            flex: 0 0 100px;
+            display: flex; */ }
     .hero-content .content .row1 {
       z-index: 1;
       margin: 0 auto;
@@ -1173,29 +1176,17 @@ div.ray-dot {
           background-size: 75px 75px; }
         .hero-content .content .row1 .logo-and-text .site-title {
           font-size: 42px; }
-    .hero-content .content .text1 {
-      font-size: 58px;
-      font-weight: 700; }
-    .hero-content .content .text2 {
-      font-size: 18px;
-      max-width: 600px;
-      margin: 0 auto; }
-    .hero-content .content .down-button {
-      position: absolute;
-      left: 50%;
-      -webkit-transform: translate(-50%, 60px);
-              transform: translate(-50%, 60px);
-      border: 3px solid #fff;
-      border-radius: 50%;
-      width: 70px;
-      height: 70px;
-      font-size: 43px;
-      -webkit-transition: all .2s;
-      transition: all .2s;
-      cursor: pointer; }
-      .hero-content .content .down-button:hover {
-        background-color: #fff;
-        color: #404040; }
+  .hero-content .social-media {
+    padding-top: 10px; }
+    .hero-content .social-media .circle {
+      border: 2px solid #fff;
+      width: 45px;
+      height: 45px;
+      line-height: 43px;
+      margin: 0 7px;
+      font-size: 16px; }
+      .hero-content .social-media .circle.github {
+        display: none; }
 
 .news-header {
   margin: 30px 0;
@@ -1225,8 +1216,7 @@ div.ray-dot {
         position: relative;
         top: 0;
         left: 0;
-        height: 100%;
-        background-color: #fff; }
+        height: 100%; }
         .news-content .recent-posts .post .post-inner a {
           color: #404040;
           text-decoration: none;
@@ -1395,8 +1385,7 @@ div.ray-dot {
         position: relative;
         top: 0;
         left: 0;
-        height: 100%;
-        background-color: #fff; }
+        height: 100%; }
         .news-content .recent-posts .post .post-inner a {
           color: #404040;
           text-decoration: none;

@@ -22,10 +22,16 @@ $height-sm: 65px;
     opacity: 1;
 
     &.top
-        opacity: 0;
+        background-color: inherit;
+
+        .site-branding
+            opacity: 0;
+        //opacity: 0;
         //height: $height-sm;// $height-lg;            
 
 .site-branding
+    transition: all 0.2s;
+    opacity: 1;
     display: flex;
     flex-shrink: 0;
     align-items: center;

@@ -21,7 +21,9 @@
 
     // Collapse Navbar
     var navbarCollapse = function () {
-        if ($("#masthead").offset().top > 400) {
+        var adminBarHeight = isUsingAdminBar ? ($('#wpadminbar').height() == null ? 35 : $('#wpadminbar').height()) : 0;        
+        console.log($("#masthead").offset().top, adminBarHeight, isUsingAdminBar )
+        if ($("#masthead").offset().top > adminBarHeight + 5) {
             $("#masthead").removeClass("top");
         } else {
             $("#masthead").addClass("top");
@@ -42,7 +44,7 @@
         origin: 'left',
         distance: '75px',
         duration: 1000,
-        delay: 300
+        delay: 600
     });
     // CORE VALUES ICONS
     sr.reveal('.about-content .icon', {
