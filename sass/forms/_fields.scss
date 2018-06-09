@@ -19,8 +19,15 @@ textarea {
 	border-radius: 3px;
 	padding: 3px;
 
+	//BDE 
+	border-radius: 4px !important;
+
 	&:focus {
 		color: $color__text-input-focus;
+
+		//BDE
+		border: 1px solid $bde-blue !important;
+		box-shadow: 0 0 4px $bde-blue !important;
 	}
 }
 

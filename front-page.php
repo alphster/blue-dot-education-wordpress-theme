@@ -243,15 +243,18 @@ get_header();
 					<div>
 						We're always excited to hear from you! Let us know the best time and method to reach you by filling out the form below.
 					</div>
+					<div class="contact-form">
+						<?php wpforms_display( 1255); ?>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="contact-content section-content">
+		<?php /*<div class="contact-content section-content">
 			<div class="max-width">
-
+				
 			</div>
-		</div>
+		</div>*/ ?>
 	</div>
 
 	<?php

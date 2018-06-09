@@ -11,9 +11,11 @@
         margin: 0 20px 30px 20px;  
         display: flex;
         flex-wrap: wrap;              
+        flex-grow: 1;
 
         .post
-            flex-basis: 33%;      
+            //flex-basis: 33%;      
+            width: 33%;
             padding: 20px;
 
             .post-inner 
@@ -124,14 +126,17 @@
     @media screen and (max-width: 1600px) 
         .max-width            
             .post
-                flex-basis: 33%;
+                //flex-basis: 33%;
+                width: 33%;
             .post:nth-child(7), .post:nth-child(8)
                 display: none;
     @media screen and (max-width: 1200px)
         .max-width            
             .post
-                flex-basis: 50%;
+                //flex-basis: 50%;
+                width: 50%;
     @media screen and (max-width: 768px)
         .max-width            
             .post
-                flex-basis: 100%;
+                //flex-basis: 100%;
+                width: 100%;
