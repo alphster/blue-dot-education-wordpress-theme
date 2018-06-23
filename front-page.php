@@ -96,7 +96,7 @@ get_header();
 		</div>
 	</div>
 	
-	<div id="section-menu-1">
+	<div id="news">
 		<?php /*<div class="news-header section-header bg-none">
 			<div class="max-width">
 				<div>
@@ -190,7 +190,7 @@ get_header();
 		?>
 		</div>
 	</div>
-	<div id="section-menu-2">
+	<div id="about">
 		<div class="team-header section-header bg-green">
 			<div class="max-width">
 				<div>
@@ -216,7 +216,7 @@ get_header();
 		</div>
 	</div>
 
-	<div id="section-menu-3">
+	<div id="programs">
 		<div class="program-header section-header bg-red">
 			<div class="max-width">
 				<div>
@@ -232,7 +232,7 @@ get_header();
 		</div>
 	</div>
 
-	<div id="section-menu-4">
+	<div id="contact">
 		<div class="contact-header section-header bg-yellow">
 			<div class="max-width">
 				<div>

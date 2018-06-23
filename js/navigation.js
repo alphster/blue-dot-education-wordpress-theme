@@ -71,6 +71,10 @@
 
 			self = self.parentElement;
 		}
+
+		container.className = container.className.replace( ' toggled', '' );
+		button.setAttribute( 'aria-expanded', 'false' );
+		menu.setAttribute( 'aria-expanded', 'false' );
 	}
 
 	/**

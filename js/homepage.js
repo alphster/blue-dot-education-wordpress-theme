@@ -73,20 +73,20 @@
 
     // create a scene
     new ScrollMagic.Scene({ 
-        triggerElement: '#section-menu-1', 
-        duration: $("#section-menu-1").height() 
+        triggerElement: '#news', 
+        duration: $("#news").height() 
     }).setClassToggle("#primary-menu", "item-1-active").addTo(controller);
     new ScrollMagic.Scene({ 
-        triggerElement: '#section-menu-2', 
-        duration: $("#section-menu-2").height() 
+        triggerElement: '#about', 
+        duration: $("#about").height() 
     }).setClassToggle("#primary-menu", "item-2-active").addTo(controller);
     new ScrollMagic.Scene({ 
-        triggerElement: '#section-menu-3', 
-        duration: $("#section-menu-3").height() 
+        triggerElement: '#programs', 
+        duration: $("#programs").height() 
     }).setClassToggle("#primary-menu", "item-3-active").addTo(controller);
     new ScrollMagic.Scene({ 
-        triggerElement: '#section-menu-4', 
-        duration: $("#section-menu-4").height() 
+        triggerElement: '#contact', 
+        duration: $("#contact").height() 
     }).setClassToggle("#primary-menu", "item-4-active").addTo(controller);
 
 })(jQuery);

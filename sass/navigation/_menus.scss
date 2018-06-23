@@ -5,6 +5,20 @@
 	justify-content: flex-end;
 	flex: 1 1 1px;	
 
+	.menu-toggle {
+		display: none;
+		z-index: 2;		
+		background: none;
+		border: none;
+		color: #fff;
+		font-size: 40px;
+		padding: 10px 30px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
 	ul {
 		list-style: none;
 		margin: 0;
@@ -39,16 +53,45 @@
 		}	
 	}
 
-	@media screen and (min-width: 800px) {
-		.menu-toggle {
-			display: none;
+	@media screen and (max-width: 850px) {
+		&.toggled {
+			ul {
+				height: 100vh;
+			}			
 		}
-		/*.main-navigation ul {
+		
+		.menu-toggle {
 			display: block;
-		}*/
+		}
+
+		ul {
+			overflow: hidden;
+			transition: all .5s;
+			height: 0px;
+			position: absolute;
+			z-index: 1;
+			left: 0;
+			right: 0;
+			top: 0;
+			background-color: $bde-dark;
+
+			li:first-child {
+				padding-top: 85px;
+			}
+
+			li {
+				display: block;
+				
+
+				a {
+					display: block;
+					width: 100%;
+					font-size: 45px;
+					text-align: center;
+				}
+			}
+		}
 	}
-
-
 }
 
 /*
