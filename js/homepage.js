@@ -11,8 +11,10 @@
         if (target.length) {
           var adminBarHeight = isUsingAdminBar ? $('#wpadminbar').height() : 0;
           var mastheadHeight = 65; // $('#masthead').height();
+          var scrollTop = target.selector === '#news' ? 0 : (target.offset().top - adminBarHeight - mastheadHeight);
+          //console.log(target);
           $('html, body').animate({            
-            scrollTop: (target.offset().top - adminBarHeight - mastheadHeight)
+            scrollTop: scrollTop
           }, 1000, "easeInOutExpo");
           return false;
         }
@@ -22,7 +24,7 @@
     // Collapse Navbar
     var navbarCollapse = function () {
         var adminBarHeight = isUsingAdminBar ? ($('#wpadminbar').height() == null ? 35 : $('#wpadminbar').height()) : 0;        
-        console.log($("#masthead").offset().top, adminBarHeight, isUsingAdminBar )
+        //console.log($("#masthead").offset().top, adminBarHeight, isUsingAdminBar )
         if ($("#masthead").offset().top > adminBarHeight + 5) {
             $("#masthead").removeClass("top");
         } else {
@@ -51,7 +53,8 @@
         duration: 600,
         delay: 500,
         scale: 0.3,
-        distance: '0px'
+        distance: '0px',
+        reset: false
     }, 200);
 
     // LATEST NEWS POSTS
@@ -62,7 +65,7 @@
         origin: 'bottom',
         opacity: 0,
         scale: 1,
-        reset: false
+        reset: false,
         //scale: 0.3,
         //distance: '0px'
     }, 150);

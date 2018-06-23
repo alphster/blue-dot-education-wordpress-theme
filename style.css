@@ -961,7 +961,8 @@ object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%; }
+  height: 100%;
+  padding: 0 20px; }
 
 .bg-red {
   background-color: #ef5350; }
@@ -1106,12 +1107,24 @@ div.ray-dot {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 50px 0; }
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 50px; }
     .site-footer .fb .fi {
+      margin-bottom: 50px;
       -webkit-box-flex: 1;
           -ms-flex: 1 1 1px;
               flex: 1 1 1px;
       text-align: center; }
+      .site-footer .fb .fi:nth-child(2) {
+        -ms-flex-preferred-size: 40%;
+            flex-basis: 40%; }
+      @media screen and (max-width: 1000px) {
+        .site-footer .fb .fi {
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%; }
+          .site-footer .fb .fi:first-child {
+            display: none; } }
   .site-footer .copyright {
     font-size: 12px;
     text-align: center;
@@ -1124,14 +1137,16 @@ div.ray-dot {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center; }
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .social-media .circle {
     border-radius: 50%;
     border: 2px solid #fff;
     width: 60px;
     height: 60px;
     line-height: 56px;
-    margin: 0 10px;
+    margin: 0 10px 20px 10px;
     font-size: 26px;
     -webkit-transition: all .2s;
     transition: all .2s;
@@ -1233,7 +1248,7 @@ div.ray-dot {
   position: relative;
   top: -80px; }
   .news-content .recent-posts {
-    margin: 0 20px 30px 20px;
+    margin-bottom: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1369,30 +1384,42 @@ div.ray-dot {
       width: 100%; } }
 
 .about-content {
-  padding: 50px 0; }
-  .about-content > div > div.core-value {
-    text-align: center;
-    padding: 0 20px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 1px;
-            flex: 1 1 1px; }
-    .about-content > div > div.core-value .title {
-      font-family: "Permanent Marker", cursive;
-      letter-spacing: 1px;
-      font-size: 28px;
-      margin: 20px 0; }
-    .about-content > div > div.core-value .text {
-      font-style: italic; }
-    .about-content > div > div.core-value i {
-      font-size: 64px; }
-      .about-content > div > div.core-value i.fa-flask {
-        color: #29B6F6; }
-      .about-content > div > div.core-value i.fa-rocket {
-        color: #ef5350; }
-      .about-content > div > div.core-value i.fa-leaf {
-        color: #66BB6A; }
-      .about-content > div > div.core-value i.fa-star {
-        color: #FFEB3B; }
+  padding-top: 50px; }
+  .about-content > div {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .about-content > div > div.core-value {
+      text-align: center;
+      padding: 0px 20px;
+      padding-bottom: 50px;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 1px;
+              flex: 1 1 1px; }
+      @media screen and (max-width: 1200px) {
+        .about-content > div > div.core-value {
+          -ms-flex-preferred-size: 50%;
+              flex-basis: 50%; } }
+      @media screen and (max-width: 768px) {
+        .about-content > div > div.core-value {
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%; } }
+      .about-content > div > div.core-value .title {
+        font-family: "Permanent Marker", cursive;
+        letter-spacing: 1px;
+        font-size: 28px;
+        margin: 20px 0; }
+      .about-content > div > div.core-value .text {
+        font-style: italic; }
+      .about-content > div > div.core-value i {
+        font-size: 64px; }
+        .about-content > div > div.core-value i.fa-flask {
+          color: #29B6F6; }
+        .about-content > div > div.core-value i.fa-rocket {
+          color: #ef5350; }
+        .about-content > div > div.core-value i.fa-leaf {
+          color: #66BB6A; }
+        .about-content > div > div.core-value i.fa-star {
+          color: #FFEB3B; }
 
 .news-header {
   margin: 30px 0;
@@ -1403,7 +1430,7 @@ div.ray-dot {
   position: relative;
   top: -80px; }
   .news-content .recent-posts {
-    margin: 0 20px 30px 20px;
+    margin-bottom: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

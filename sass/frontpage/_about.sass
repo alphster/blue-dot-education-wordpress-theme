@@ -1,10 +1,17 @@
-.about-content
-    padding: 50px 0;
+.about-content    
+    padding-top: 50px;
     > div
-        > div.core-value
+        flex-wrap: wrap;
+        > div.core-value            
             text-align: center;
-            padding: 0 20px;
-            flex: 1 1 1px;            
+            padding: 0px 20px;
+            padding-bottom: 50px;
+            flex: 1 1 1px;                 
+            @media screen and (max-width: 1200px)
+                flex-basis: 50%;
+
+            @media screen and (max-width: 768px)
+                flex-basis: 100%;
 
             .title 
                 font-family: $fun-font;
@@ -29,3 +36,4 @@
 
                 &.fa-star
                     color: $bde-yellow;
+

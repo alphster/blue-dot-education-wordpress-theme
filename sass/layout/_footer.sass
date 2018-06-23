@@ -20,12 +20,23 @@
 
     .fb
         width: 100%;
-        display: flex;
-        padding: 50px 0;
+        display: flex;        
+        flex-wrap: wrap;
+        margin-top: 50px;
 
         .fi
+            margin-bottom: 50px;
             flex: 1 1 1px;
-            text-align: center;            
+            text-align: center;      
+
+            &:nth-child(2) 
+                flex-basis: 40%;
+
+            @media screen and (max-width: 1000px)
+                &:first-child
+                    display: none;
+
+                flex-basis: 100%;      
     
     .copyright 
         font-size: 12px;
