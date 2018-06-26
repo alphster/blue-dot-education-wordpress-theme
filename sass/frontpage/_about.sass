@@ -1,39 +1,36 @@
-.about-content    
-    padding-top: 50px;
-    > div
+.about-section
+    background-color: $bde-dark;
+    color: #fff;
+
+    .section-header
+        .text
+            opacity: .8;
+
+    .content    
+        padding: 30px 0;
+        display: flex;
         flex-wrap: wrap;
-        > div.core-value            
-            text-align: center;
-            padding: 0px 20px;
-            padding-bottom: 50px;
-            flex: 1 1 1px;                 
+        > div.core-value-flex
+            flex: 1 1 1px;
+
             @media screen and (max-width: 1200px)
                 flex-basis: 50%;
 
             @media screen and (max-width: 768px)
                 flex-basis: 100%;
 
-            .title 
-                font-family: $fun-font;
-                letter-spacing: 1px;
-                font-size: 28px;
-                margin: 20px 0;                
+            > .core-value          
+                text-align: center
+                margin: 10px
+                padding: 25px 10px
+                border: 3px solid #fff;
 
-            .text                
-                font-style: italic;
+                .title 
+                    font-size: 28px
+                    margin: 20px 0             
+
+                .text                                    
+                    opacity: .8
 
             i
                 font-size: 64px;
-
-                &.fa-flask
-                    color: $bde-blue;
-
-                &.fa-rocket
-                    color: $bde-red;
-
-                &.fa-leaf
-                    color: $bde-green;
-
-                &.fa-star
-                    color: $bde-yellow;
-

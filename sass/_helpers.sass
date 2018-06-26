@@ -5,6 +5,13 @@
     height: 100%;
     padding: 0 20px;
 
+.max-width-lg
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    padding: 0 20px;
+
 .bg-red
     background-color: $bde-red;
     //color: #fff;
@@ -46,48 +53,52 @@
     color: inherit !important;
 
 .section-header
-    box-shadow: 0px 5px 25px #404040;
-    color: #333;
-    > div
-        > div            
-            width: 100%;
-            text-align: center;
-            margin: 20px 0;
-            font-size: 20px;                                    
+    width: 100%;
+    text-align: center;
+    .title
+        font-size: 40px;
+        margin: 20px 0 10px 0;
 
-            .title
-                font-size: 44px;
-                font-family: $fun-font;
-                letter-spacing: 2px;        
+    .text           
+        font-family: $serif-font 
+        width: 100%;
+        margin: 20px 0 0 0;
+        font-size: 18px;
 
 div.ray-dot
     position: relative;    
     margin: 0 auto;    
-    height: 60px;
+    height: 40px;
     width: 100px;
     display: block;    
     div:first-child       
         position: absolute;
-        top: 20px;
+        top: 10px;
         right: 20%;
         height: 19px;
         width: 19px;
         background-color: #333;        
         border-radius: 50%;            
         z-index: 1;
-        //background-color: #fff;        
+        background-color: $bde-blue !important;   
 
     div:nth-child(2)
         position: absolute;
-        top: 26px;
+        top: 16px;
         background-color: #333;               
         height: 7px;          
         width: 100%;
         z-index: 0;
         border-radius: 5px;        
-        //background-color: #fff;    
+        background-color: $bde-yellow !important;
 
-    &.colored
+    &.green
+        div:first-child
+            background-color: $bde-blue !important;
+        div:nth-child(2)
+            background-color: $bde-yellow !important;
+
+    &.green
         div:first-child
             background-color: $bde-blue !important;
         div:nth-child(2)
