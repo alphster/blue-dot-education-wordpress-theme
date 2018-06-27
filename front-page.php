@@ -182,7 +182,7 @@ get_header();
 						MEET THE TEAM
 					</div>
 					<div class="team-row">
-						<?php 
+						<?php /*
 							foreach($team as $value) { echo "
 								<div class='team-member-flex'>
 									<div class='team-member' style='border-color: {$value->color}'>
@@ -192,7 +192,7 @@ get_header();
 									</div>
 								</div>";
 							}
-						?>
+						*/?>
 					</div>
 				</div>
 			</div>
