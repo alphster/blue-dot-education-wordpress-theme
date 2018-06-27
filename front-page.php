@@ -232,7 +232,7 @@ get_header();
 					</div>
 				</div>
 				<div class="contact-form">
-					<?php wpforms_display( 1255); ?>
+					<?php/* wpforms_display( 1255); */?>
 				</div>
 			</div>
 		</div>
