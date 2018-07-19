@@ -214,7 +214,7 @@ get_header();
 
 	<div id="programs" class="programs-section">
 		<div class="max-width">
-			<div>
+			<div style="width: 100%">
 				<div class="section-header">
 					<div class="title">
 						<?php echo $programsTitle ?>
@@ -233,7 +233,7 @@ get_header();
 
 	<div id="contact" class="contact-section">
 		<div class="max-width">
-			<div>
+			<div style="width: 100%">
 				<div class="section-header">
 					<div class="title">
 						<?php echo $contactUsTitle ?>
