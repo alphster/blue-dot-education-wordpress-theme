@@ -15,6 +15,18 @@ class CoreValue {}
 class TeamMember {}
 
 $lorips = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+$lorips2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
+$aboutUsTitle = get_theme_mod('text_header_aboutus', 'About Us');
+$aboutUsText = get_theme_mod('textarea_header_aboutus', $lorips2);
+
+$programsTitle = get_theme_mod('text_header_programs', 'Our Programs & Projects');
+$programsText = get_theme_mod('textarea_header_programs', $lorips2);
+
+$contactUsTitle = get_theme_mod('text_header_contactus', 'Let\'s get in Touch!');
+$contactUsText = get_theme_mod('textarea_header_contactus', 'We\'re always excited to hear from you! Let us know the best time and method to reach you by filling out the form below.');
+
+$heroSubTitle = get_theme_mod('hero_sub_title', 'Enhancing Education through Experiences.');
 
 $cv1 = new CoreValue();
 $cv1->icon = get_theme_mod('core_value_icon1', 'fas fa-flask');
@@ -68,6 +80,8 @@ $team4->text = get_theme_mod('core_value_text4', $lorips);
 
 $teamMembers = array($team1, $team2, $team3, $team4);
 
+$contactFormId = get_theme_mod('contact_wpforms_id', '');
+
 get_header();
 ?>
 	<div class="hero-content">
@@ -80,7 +94,7 @@ get_header();
 							<div class="logo" alt="logo"></div>
 							<div class="site-title">
 								<?php bloginfo( 'name' ); ?>
-								<div class="sub-text">Enhancing Education through Experiences.</div>								
+								<div class="sub-text"><?php echo $heroSubTitle ?></div>	
 							</div>			
 							
 						</div><!-- .site-branding -->						
@@ -151,12 +165,11 @@ get_header();
 				<div>
 					<div class="section-header">
 						<div class="title">
-							About Us
+							<?php echo $aboutUsTitle ?>
 						</div>
 						<?php divider(); ?>
 						<div class="text">
-							These are the things that makes Blue Dot Education tick. Something said about overall mission and goals. Lorem ipsum dolor
-							sit amet, cum no placerat antiopam dignissim, vis eu vide natum partiendo, est postea reprimique no. Cu vis mollis vituperatoribus.
+							<?php echo $aboutUsText ?>
 						</div>
 					</div>
 					<div class="content">
@@ -204,12 +217,11 @@ get_header();
 			<div>
 				<div class="section-header">
 					<div class="title">
-						Our Programs &amp; Projects
+						<?php echo $programsTitle ?>
 					</div>
 					<?php divider(); ?>
 					<div class="text">
-						These are the things that makes Blue Dot Education tick. Something said about overall mission and goals. Lorem ipsum dolor
-						sit amet, cum no placerat antiopam dignissim, vis eu vide natum partiendo, est postea reprimique no. Cu vis mollis vituperatoribus.
+						<?php echo $programsText ?>
 					</div>
 				</div>
 				<div class="content">
@@ -224,15 +236,15 @@ get_header();
 			<div>
 				<div class="section-header">
 					<div class="title">
-						Let's get in touch!
+						<?php echo $contactUsTitle ?>
 					</div>
 					<?php divider(); ?>
 					<div class="text">
-						We're always excited to hear from you! Let us know the best time and method to reach you by filling out the form below.
+						<?php echo $contactUsText ?>
 					</div>
 				</div>
 				<div class="contact-form">
-					<?php/* wpforms_display( 1255); */?>
+					<?php if ($contactFormId != '') wpforms_display($contactFormId); ?>
 				</div>
 			</div>
 		</div>

@@ -47,10 +47,8 @@ function bde_hero_stuff ( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting( 'text_call_to_action');
-	$wp_customize->add_control( 'text_call_to_action', array('type' => 'textarea', 'section' => 'hero-section', 'label' => 'Call to Action Big-Text', 'settings' => 'text_call_to_action'));
-	$wp_customize->add_setting( 'text_call_to_action2');
-	$wp_customize->add_control( 'text_call_to_action2', array('type' => 'textarea', 'section' => 'hero-section', 'label' => 'Call to Action Sub-Text', 'settings' => 'text_call_to_action2'));
+	$wp_customize->add_setting( 'hero_sub_title');
+	$wp_customize->add_control( 'hero_sub_title', array('type' => 'text', 'section' => 'hero-section', 'label' => 'Sub-Title', 'settings' => 'hero_sub_title'));
 }
 add_action( 'customize_register', 'bde_hero_stuff' );
 
@@ -67,7 +65,7 @@ function bde_about_section ( $wp_customize ) {
 	$wp_customize->add_control( 'text_header_aboutus', array('type' => 'text', 'section' => 'aboutus-section', 'label' => 'About Us Header Text', 'settings' => 'text_header_aboutus'));
 
 	$wp_customize->add_setting( 'textarea_header_aboutus');
-	$wp_customize->add_control( 'textarea_header_aboutus', array('type' => 'text', 'section' => 'aboutus-section', 'label' => 'About Us Header Sub-Text', 'settings' => 'textarea_header_aboutus'));
+	$wp_customize->add_control( 'textarea_header_aboutus', array('type' => 'textarea', 'section' => 'aboutus-section', 'label' => 'About Us Header Sub-Text', 'settings' => 'textarea_header_aboutus'));
 
 	$wp_customize->add_setting( 'core_value_icon1', array('default' => 'fas fa-flask'));
 	$wp_customize->add_control( 'core_value_icon1', array('type' => 'text', 'section' => 'aboutus-section', 'label' => 'Icon 1', 'settings' => 'core_value_icon1'));
@@ -112,7 +110,7 @@ function bde_social_media_register ( $wp_customize ) {
 	$wp_customize->add_section(
 		'social-media',
 		array(
-			'title' => __( 'Social Media', '_s' ),
+			'title' => __( 'Social Media Settings', '_s' ),
 			'priority' => 23,
 			'description' => __( 'Come on now, you know what to do with this. It\'ll make icons appear in the footer.', '_s' )
 		)
@@ -130,6 +128,45 @@ function bde_social_media_register ( $wp_customize ) {
 	$wp_customize->add_control( 'url_github', array('type' => 'text', 'section' => 'social-media', 'label' => 'Github', 'settings' => 'url_github'));
 }
 add_action( 'customize_register', 'bde_social_media_register' );
+
+function bde_contact_us_register ( $wp_customize ) {
+	$wp_customize->add_section(
+		'contact-us',
+		array(
+			'title' => __( 'Contact Us Settings', '_s' ),
+			'priority' => 24,
+			'description' => __( 'Use WP Forms plugin to create a contact form and set the ID here.', '_s' )
+		)
+	);
+
+	$wp_customize->add_setting( 'text_header_contactus');
+	$wp_customize->add_control( 'text_header_contactus', array('type' => 'text', 'section' => 'contact-us', 'label' => 'Header Text', 'settings' => 'text_header_contactus'));
+
+	$wp_customize->add_setting( 'textarea_header_contactus');
+	$wp_customize->add_control( 'textarea_header_contactus', array('type' => 'textarea', 'section' => 'contact-us', 'label' => 'Header Sub-Text', 'settings' => 'textarea_header_contactus'));
+
+	$wp_customize->add_setting( 'contact_wpforms_id' );
+	$wp_customize->add_control( 'contact_wpforms_id', array('type' => 'text', 'section' => 'contact-us', 'label' => 'WP Form ID', 'settings' => 'contact_wpforms_id'));
+}
+add_action( 'customize_register', 'bde_contact_us_register' );
+
+function bde_programs_register ( $wp_customize ) {
+	$wp_customize->add_section(
+		'programs-section',
+		array(
+			'title' => __( 'Programs/Projects Settings', '_s' ),
+			'priority' => 25,
+			'description' => __( 'Customize the programs/projects section of the site.', '_s' )
+		)
+	);
+
+	$wp_customize->add_setting( 'text_header_programs');
+	$wp_customize->add_control( 'text_header_programs', array('type' => 'text', 'section' => 'programs-section', 'label' => 'Programs Header Text', 'settings' => 'text_header_programs'));
+
+	$wp_customize->add_setting( 'textarea_header_programs');
+	$wp_customize->add_control( 'textarea_header_programs', array('type' => 'textarea', 'section' => 'programs-section', 'label' => 'Programs Header Sub-Text', 'settings' => 'textarea_header_programs'));
+}
+add_action( 'customize_register', 'bde_programs_register' );
 
 function bde_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
