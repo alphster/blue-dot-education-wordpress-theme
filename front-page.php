@@ -123,7 +123,7 @@ get_header();
 					$recent_post_excerpt = wp_trim_words( $recent["post_content"], $num_words = 33);
 					$formatted_date = date('l, F j, Y', strtotime($recent_post_date));	
 					$recent_author_id = $recent["post_author"];
-					$recent_author_image = get_avatar_url( $recent_author_id );
+					$recent_author_image = get_wp_user_avatar_src( $recent_author_id );
 					$recent_author = get_user_by( 'ID', $recent_author_id );
 
 					if ( has_post_thumbnail( $recent["ID"]) ) {
@@ -225,7 +225,7 @@ get_header();
 					</div>
 				</div>
 				<div class="content">
-
+					COMING SOON!
 				</div>
 			</div>
 		</div>

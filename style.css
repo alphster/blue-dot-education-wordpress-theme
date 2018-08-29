@@ -584,6 +584,9 @@ a {
     color: #fff;
     font-size: 40px;
     padding: 10px 30px; }
+    @media screen and (max-width: 500px) {
+      .main-navigation .menu-toggle {
+        padding: 10px 10px; } }
     .main-navigation .menu-toggle:focus {
       outline: none; }
   .main-navigation ul {
@@ -633,6 +636,9 @@ a {
           width: 100%;
           font-size: 45px;
           text-align: center; } }
+  @media screen and (max-width: 400px) {
+    .main-navigation ul li a {
+      font-size: 26px; } }
 
 /*
 .main-navigation {
@@ -1092,6 +1098,18 @@ div.ray-dot {
       position: relative;
       top: -8px;
       padding-left: 3px; }
+  @media screen and (max-width: 500px) {
+    .site-branding {
+      margin-left: 0; }
+      .site-branding .site-title {
+        font-size: 24px; }
+        .site-branding .site-title .sub-text {
+          font-size: 14px; } }
+  @media screen and (max-width: 380px) {
+    .site-branding .site-title {
+      font-size: 18px; }
+      .site-branding .site-title .sub-text {
+        font-size: 12px; } }
 
 .site-footer {
   color: #fff;
@@ -1225,7 +1243,7 @@ div.ray-dot {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      text-align: center; }
+      text-align: left; }
       .hero-content .content .row1 .logo-and-text {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1237,9 +1255,25 @@ div.ray-dot {
         .hero-content .content .row1 .logo-and-text .logo {
           width: 75px;
           height: 75px;
-          background-size: 75px 75px; }
+          background-size: 75px 75px;
+          -ms-flex-negative: 0;
+              flex-shrink: 0; }
         .hero-content .content .row1 .logo-and-text .site-title {
           font-size: 42px; }
+      @media screen and (max-width: 500px) {
+        .hero-content .content .row1 .logo-and-text .logo {
+          width: 60px;
+          height: 60px;
+          background-size: 60px 60px; }
+        .hero-content .content .row1 .logo-and-text .site-title {
+          font-size: 30px; } }
+      @media screen and (max-width: 380px) {
+        .hero-content .content .row1 .logo-and-text .logo {
+          width: 40px;
+          height: 40px;
+          background-size: 40px 40px; }
+        .hero-content .content .row1 .logo-and-text .site-title {
+          font-size: 24px; } }
   .hero-content .social-media {
     padding-top: 10px; }
     .hero-content .social-media .circle {
@@ -1553,6 +1587,13 @@ div.ray-dot {
   color: #fff; }
   .programs-section .text {
     opacity: 1; }
+  .programs-section .content {
+    text-align: center;
+    font-size: 40px;
+    font-style: italic;
+    padding: 150px 0;
+    border: 3px dashed white;
+    margin-bottom: 50px; }
 
 .team-section {
   background-color: #66BB6A;

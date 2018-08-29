@@ -44,7 +44,7 @@ $height-sm: 65px;
         background-size: $logo-size $logo-size;
 
     .site-title
-        margin: 0;        
+        margin: 0;         
         a
             color: #fff;
             text-decoration: none;
@@ -54,3 +54,17 @@ $height-sm: 65px;
             position: relative;
             top: -8px;
             padding-left: 3px;
+    @media screen and (max-width: 500px)
+        margin-left: 0;
+        .site-title
+            font-size: 24px;          
+            .sub-text
+                font-size: 14px;
+
+    @media screen and (max-width: 380px)
+        .site-title
+            font-size: 18px;
+            .sub-text
+                font-size: 12px;
+
+    

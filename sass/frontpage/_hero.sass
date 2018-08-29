@@ -37,20 +37,37 @@
             flex-grow: 1;
             display: flex;            
             align-items: center;
-            text-align: center;
+            text-align: left;
 
             .logo-and-text
                 display: flex;
                 flex-direction: column;
-
-                $logo-size: 75px;
+                
                 .logo
-                    width: $logo-size;
-                    height: $logo-size;
-                    background-size: $logo-size $logo-size;
-
-                .site-title
+                    width: 75px;
+                    height: 75px;
+                    background-size: 75px 75px;
+                    flex-shrink: 0;
+                .site-title                    
                     font-size: 42px;
+                    
+            @media screen and (max-width: 500px)
+                .logo-and-text
+                    .logo
+                        width: 60px;
+                        height: 60px;
+                        background-size: 60px 60px;
+                    .site-title
+                        font-size: 30px;
+            
+            @media screen and (max-width: 380px)
+               .logo-and-text
+                    .logo
+                        width: 40px;
+                        height: 40px;
+                        background-size: 40px 40px;
+                    .site-title
+                        font-size: 24px;
 
     .social-media
         //top: -90px;

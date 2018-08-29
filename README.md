@@ -6,12 +6,6 @@ https://underscores.me/
 
 After setting up a DEV environment (e.g. WAMP, Wordpress, npm, gulp), just run "npm install" followed by "gulp".
 
-Much inspiration came from many bootstrap starter themes (although no bootstrap was used in the final version).
-
-Some libraries used:
-* Font Awesome 5 - https://fontawesome.com/
-* Scroll Reveal - https://scrollrevealjs.org/
-
 OLD UNDERSCORES README BELOW
 ----------------------------
 

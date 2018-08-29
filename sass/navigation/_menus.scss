@@ -13,6 +13,11 @@
 		color: #fff;
 		font-size: 40px;
 		padding: 10px 30px;
+		
+		@media screen and (max-width: 500px) {
+			padding: 10px 10px;
+		}
+			
 
 		&:focus {
 			outline: none;
@@ -91,6 +96,17 @@
 				}
 			}
 		}
+	}
+
+	@media screen and (max-width: 400px) {
+		ul {
+			li {
+				a {
+					font-size: 26px;
+				}
+			}
+		}
+
 	}
 }
 
