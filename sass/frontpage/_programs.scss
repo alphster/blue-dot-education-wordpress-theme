@@ -1,0 +1,19 @@
+.programs-section {
+    background-color: $bde-red;
+    color: #fff;
+    
+    .text {
+        opacity: 1;
+    }
+        
+    .content {
+        text-align: center;
+        font-size: 40px;
+        font-style: italic;
+        padding: 150px 0;
+        border: 3px dashed rgba(255,255,255,.5);
+        color: rgba(255,255,255,.5);
+        margin-bottom: 50px;
+    }        
+}
+    

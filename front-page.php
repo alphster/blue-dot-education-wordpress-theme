@@ -20,6 +20,9 @@ $lorips2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
 $aboutUsTitle = get_theme_mod('text_header_aboutus', 'About Us');
 $aboutUsText = get_theme_mod('textarea_header_aboutus', $lorips2);
 
+$teamTitle = get_theme_mod('text_header_team', 'Meet the Team');
+$teamText = get_theme_mod('textarea_header_team', $lorips2);
+
 $programsTitle = get_theme_mod('text_header_programs', 'Our Programs & Projects');
 $programsText = get_theme_mod('textarea_header_programs', $lorips2);
 
@@ -190,10 +193,16 @@ get_header();
 		</div>
 		<div class="team-section">
 			<div class="max-width">
-				<div>
+			<div>
+				<div class="section-header">
 					<div class="title">
-						MEET THE TEAM
+						<?php echo $teamTitle ?>
 					</div>
+					<?php divider(); ?>
+					<div class="text">
+						<?php echo $teamText ?>
+					</div>
+				</div>
 					<div class="team-row">
 						<?php /*
 							foreach($team as $value) { echo "
