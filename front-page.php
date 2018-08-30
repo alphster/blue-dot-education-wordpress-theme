@@ -58,30 +58,26 @@ $cv4->text = get_theme_mod('core_value_text4', $lorips);
 $coreValues = array($cv1, $cv2, $cv3, $cv4);
 
 $team1 = new TeamMember();
-$team1->name = get_theme_mod('core_value_icon1', 'fas fa-flask');
-$team1->title = get_theme_mod('core_value_title1', 'Science');
-$team1->color = get_theme_mod('core_value_color1', '#29B6F6');
-$team1->text = get_theme_mod('core_value_text1', $lorips);
+$team1->name = get_theme_mod('team_member_name1', 'Andrew Lerario');
+$team1->text = get_theme_mod('team_member_text1', $lorips2);
 
 $team2 = new TeamMember();
-$team2->name = get_theme_mod('core_value_icon2', 'fas fa-rocket');
-$team2->title = get_theme_mod('core_value_title2', 'Exploration');
-$team2->color = get_theme_mod('core_value_color2', '#EF5350');
-$team2->text = get_theme_mod('core_value_text2', $lorips);
+$team2->name = get_theme_mod('team_member_name2', 'Brian Delgado');
+$team2->text = get_theme_mod('team_member_text2', $lorips2);
 
 $team3 = new TeamMember();
-$team3->icon = get_theme_mod('core_value_icon3', 'fas fa-leaf');
-$team3->title = get_theme_mod('core_value_title3', 'Stewardship');
-$team3->color = get_theme_mod('core_value_color3', '#66BB6A');
-$team3->text = get_theme_mod('core_value_text3', $lorips);
+$team3->name = get_theme_mod('team_member_name3', 'Adam Borek');
+$team3->text = get_theme_mod('team_member_text3', $lorips2);
 
 $team4 = new TeamMember();
-$team4->icon = get_theme_mod('core_value_icon4', 'fas fa-star');
-$team4->title = get_theme_mod('core_value_title4', 'Something');
-$team4->color = get_theme_mod('core_value_color4', '#FFEB3B');
-$team4->text = get_theme_mod('core_value_text4', $lorips);
+$team4->name = get_theme_mod('team_member_name4', 'Wesley Davis');
+$team4->text = get_theme_mod('team_member_text4', $lorips2);
 
-$teamMembers = array($team1, $team2, $team3, $team4);
+$team5 = new TeamMember();
+$team5->name = get_theme_mod('team_member_name5', 'Mike Strong');
+$team5->text = get_theme_mod('team_member_text5', $lorips2);
+
+$teamMembers = array($team1, $team2, $team3, $team4, $team5);
 
 $contactFormId = get_theme_mod('contact_wpforms_id', '');
 
@@ -204,17 +200,19 @@ get_header();
 					</div>
 				</div>
 					<div class="team-row">
-						<?php /*
-							foreach($team as $value) { echo "
-								<div class='team-member-flex'>
-									<div class='team-member' style='border-color: {$value->color}'>
-										<div class='icon' style='color: {$value->color}'><i class='{$value->icon}'></i></div>
-										<div class='title'>{$value->title}</div>
-										<div class='text'>{$value->text}</div>
+						<?php 
+							foreach($teamMembers as $value) { echo '
+								<div class="team-member-flex">
+									<div class="team-member-inner">
+										<div class="image">
+											<div class="bg-image" style="background-image: url(\''.$value->image.'\')"></div>
+										</div>
+										<div class="name">'.$value->name.'</div>
+										<div class="text">'.$value->text.'</div>										
 									</div>
-								</div>";
+								</div>';
 							}
-						*/?>
+						?>
 					</div>
 				</div>
 			</div>

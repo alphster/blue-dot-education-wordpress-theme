@@ -1600,4 +1600,62 @@ div.ray-dot {
 
 .team-section {
   background-color: #66BB6A;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 20px; }
+  .team-section .team-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .team-section .team-row .team-member-flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap; }
+      .team-section .team-row .team-member-flex .team-member-inner {
+        padding: 20px 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .team-section .team-row .team-member-flex .team-member-inner .image {
+          margin-top: 10px;
+          border: 5px solid #fff;
+          background-color: gray;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%; }
+        .team-section .team-row .team-member-flex .team-member-inner .name {
+          margin: 10px 0;
+          font-size: 32px; }
+  .team-section .team-member-flex {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%; }
+    .team-section .team-member-flex:nth-child(1), .team-section .team-member-flex:nth-child(2) {
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%; }
+    @media screen and (max-width: 1200px) {
+      .team-section .team-member-flex {
+        -ms-flex-preferred-size: 50% !important;
+            flex-basis: 50% !important;
+        max-width: 50%; } }
+    @media screen and (max-width: 768px) {
+      .team-section .team-member-flex {
+        -ms-flex-preferred-size: 100% !important;
+            flex-basis: 100% !important;
+        max-width: 100%; } }

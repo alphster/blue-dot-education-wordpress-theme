@@ -1,0 +1,66 @@
+.team-section {
+    background-color: $bde-green;
+    text-align: center;
+    padding-bottom: 20px;
+
+    .team-row {
+        display: flex;
+        flex-flow: row wrap;               
+        justify-content: center;
+
+        .team-member-flex {
+            display: flex;
+            flex-flow: column nowrap;                        
+
+            .team-member-inner {
+                padding: 20px 10px;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+
+                .image {
+                    margin-top: 10px;
+                    border: 5px solid #fff;
+                    background-color: gray;
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+
+                    .bg-image {
+
+                    }
+                }
+
+                .name {
+                    margin: 10px 0;
+                    font-size: 32px;
+                }
+
+                .text {
+                    
+                }
+            }
+        }
+    }
+
+    // Styling for 5 flexing members
+    .team-member-flex {
+        flex-basis: 33%;
+        &:nth-child(1), &:nth-child(2) {
+            flex-basis: 50%;
+        }
+
+        @media screen and (max-width: 1200px) {
+            flex-basis: 50% !important;
+            max-width: 50%
+        }
+            
+
+        @media screen and (max-width: 768px) {
+            flex-basis: 100% !important;
+            max-width: 100%;
+        }
+    }
+}
+    
+

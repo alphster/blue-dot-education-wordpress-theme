@@ -110,6 +110,50 @@ function bde_about_section ( $wp_customize ) {
 }
 add_action( 'customize_register', 'bde_about_section' );
 
+function bde_team_section ( $wp_customize ) {
+	$wp_customize->add_section(
+		'team-section',
+		array(
+			'title' => __( 'Team Settings', '_s' ),
+			'priority' => 25
+		)
+	);
+
+	global $lorips, $lorips2;
+
+	$wp_customize->add_setting( 'text_header_team', array('default' => 'Meet the Team'));
+	$wp_customize->add_control( 'text_header_team', array('type' => 'text', 'section' => 'team-section', 'label' => 'Team Header Text', 'settings' => 'text_header_team'));
+
+	$wp_customize->add_setting( 'textarea_header_team', array('default' => $lorips2));
+	$wp_customize->add_control( 'textarea_header_team', array('type' => 'textarea', 'section' => 'team-section', 'label' => 'Team Header Sub-Text', 'settings' => 'textarea_header_team'));
+
+	$wp_customize->add_setting( 'team_member_name1', array('default' => 'Andrew Lerario'));
+	$wp_customize->add_control( 'team_member_name1', array('type' => 'text', 'section' => 'team-section', 'label' => 'Member Name 1', 'settings' => 'team_member_name1'));
+	$wp_customize->add_setting( 'team_member_text1', array('default' => $lorips2));
+	$wp_customize->add_control( 'team_member_text1', array('type' => 'text', 'section' => 'team-section', 'label' => 'Member Text 1', 'settings' => 'team_member_text1'));
+
+	$wp_customize->add_setting( 'team_member_name2', array('default' => 'Brian Delgado'));
+	$wp_customize->add_control( 'team_member_name2', array('type' => 'text', 'section' => 'team-section', 'label' => 'Member Name 2', 'settings' => 'team_member_name2'));
+	$wp_customize->add_setting( 'team_member_text2', array('default' => $lorips2));
+	$wp_customize->add_control( 'team_member_text2', array('type' => 'text', 'section' => 'team-section', 'label' => 'Member Text 2', 'settings' => 'team_member_text2'));
+
+	$wp_customize->add_setting( 'team_member_name3', array('default' => 'Adam Borek'));
+	$wp_customize->add_control( 'team_member_name3', array('type' => 'text', 'section' => 'team-section', 'label' => 'Member Name 3', 'settings' => 'team_member_name3'));
+	$wp_customize->add_setting( 'team_member_text3', array('default' => $lorips2));
+	$wp_customize->add_control( 'team_member_text3', array('type' => 'text', 'section' => 'team-section', 'label' => 'Member Text 3', 'settings' => 'team_member_text3'));
+
+	$wp_customize->add_setting( 'team_member_name4', array('default' => 'Wesley Davis'));
+	$wp_customize->add_control( 'team_member_name4', array('type' => 'text', 'section' => 'team-section', 'label' => 'Member Name 4', 'settings' => 'team_member_name4'));
+	$wp_customize->add_setting( 'team_member_text4', array('default' => $lorips2));
+	$wp_customize->add_control( 'team_member_text4', array('type' => 'text', 'section' => 'team-section', 'label' => 'Member Text 4', 'settings' => 'team_member_text4'));
+
+	$wp_customize->add_setting( 'team_member_name5', array('default' => 'Mike Strong'));
+	$wp_customize->add_control( 'team_member_name5', array('type' => 'text', 'section' => 'team-section', 'label' => 'Member Name 5', 'settings' => 'team_member_name5'));
+	$wp_customize->add_setting( 'team_member_text5', array('default' => $lorips2));
+	$wp_customize->add_control( 'team_member_text5', array('type' => 'text', 'section' => 'team-section', 'label' => 'Member Text 5', 'settings' => 'team_member_text5'));
+}
+add_action( 'customize_register', 'bde_team_section' );
+
 function bde_social_media_register ( $wp_customize ) {
 	// Add Social Media Section
 	$wp_customize->add_section(
