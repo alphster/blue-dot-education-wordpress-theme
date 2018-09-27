@@ -60,22 +60,27 @@ $coreValues = array($cv1, $cv2, $cv3, $cv4);
 $team1 = new TeamMember();
 $team1->name = get_theme_mod('team_member_name1', 'Andrew Lerario');
 $team1->text = get_theme_mod('team_member_text1', $lorips2);
+$team1->pic = get_theme_mod('team_member_pic1');
 
 $team2 = new TeamMember();
 $team2->name = get_theme_mod('team_member_name2', 'Brian Delgado');
 $team2->text = get_theme_mod('team_member_text2', $lorips2);
+$team2->pic = get_theme_mod('team_member_pic2');
 
 $team3 = new TeamMember();
 $team3->name = get_theme_mod('team_member_name3', 'Adam Borek');
 $team3->text = get_theme_mod('team_member_text3', $lorips2);
+$team3->pic = get_theme_mod('team_member_pic3');
 
 $team4 = new TeamMember();
 $team4->name = get_theme_mod('team_member_name4', 'Wesley Davis');
 $team4->text = get_theme_mod('team_member_text4', $lorips2);
+$team4->pic = get_theme_mod('team_member_pic4');
 
 $team5 = new TeamMember();
 $team5->name = get_theme_mod('team_member_name5', 'Mike Strong');
 $team5->text = get_theme_mod('team_member_text5', $lorips2);
+$team5->pic = get_theme_mod('team_member_pic5');
 
 $teamMembers = array($team1, $team2, $team3, $team4, $team5);
 
@@ -201,14 +206,15 @@ get_header();
 				</div>
 					<div class="team-row">
 						<?php 
-							foreach($teamMembers as $value) { echo '
+							foreach($teamMembers as $value) { 
+								$picId = attachment_url_to_postid($value->pic);
+								$medPic = wp_get_attachment_image_src($picId, 'medium')[0];
+								echo '
 								<div class="team-member-flex">
 									<div class="team-member-inner">
-										<div class="image">
-											<div class="bg-image" style="background-image: url(\''.$value->image.'\')"></div>
-										</div>
+										<div class="image" style="background-image: url(\''.$medPic.'\')"></div>
 										<div class="name">'.$value->name.'</div>
-										<div class="text">'.$value->text.'</div>										
+										<div class="text">'.$value->text.'</div>
 									</div>
 								</div>';
 							}

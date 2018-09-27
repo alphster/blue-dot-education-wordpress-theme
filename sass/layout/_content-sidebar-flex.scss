@@ -1,0 +1,42 @@
+.site-content.not-front-page {
+	display:flex;
+	max-width: 1200px;
+	//justify-content: center;
+	margin: 65px auto 0 auto;
+	flex-direction: row;
+	
+	.content-area {
+		//float: left;
+		//margin: 0 (-$size__site-sidebar) 0 0;
+		//width: $size__site-main;
+
+		.site-main {
+		//padding: 0 100px;
+		//	margin: 0 $size__site-sidebar 0 0;
+		}
+	}
+
+	.widget-area {
+		padding-top: 20px;
+		padding-left: 50px;
+		flex-basis: 350px;
+		flex-shrink: 0;
+		ul {
+			margin: 0;
+			list-style: circle;
+			padding: 0;
+
+			li {
+				margin-bottom: 8px;
+				font-size: 14px;
+				line-height: 18px;
+			}
+		}
+		//float: right;
+		//overflow: hidden;
+		//width: $size__site-sidebar;
+	}
+}
+
+
+@import "no-sidebar";

@@ -21,13 +21,38 @@ $height-sm: 65px;
     z-index: 3;
     opacity: 1;
 
-    &.top
+    .goBack
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        font-size: 25px;
+        
+        div 
+            border-right: 1px solid gray;
+            padding-right: 20px;
+            
+            i
+                margin-right: 10px;
+
+            a
+                color: #fff;
+                text-decoration: none;
+
+    &.front-page
+        .goBack
+            display: none;
+
+    &.top.front-page
         background-color: inherit;
 
         .site-branding
             opacity: 0;
         //opacity: 0;
         height: $height-lg;// $height-lg;            
+
+    &.not-front-page
+        .main-navigation
+            display: none;
 
 .site-branding
     transition: all 0.2s;

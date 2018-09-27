@@ -851,6 +851,40 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.site-content.not-front-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1200px;
+  margin: 65px auto 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  .site-content.not-front-page .widget-area {
+    padding-top: 20px;
+    padding-left: 50px;
+    -ms-flex-preferred-size: 350px;
+        flex-basis: 350px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+    .site-content.not-front-page .widget-area ul {
+      margin: 0;
+      list-style: circle;
+      padding: 0; }
+      .site-content.not-front-page .widget-area ul li {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 18px; }
+
+.no-sidebar .content-area {
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+.no-sidebar .site-main {
+  margin-right: 0; }
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -866,7 +900,10 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 1.5em 0 0;
+  font-size: 21px;
+  line-height: 37px;
+  font-family: "Merriweather", serif; }
 
 .page-links {
   clear: both;
@@ -1063,11 +1100,32 @@ div.ray-dot {
   transition: all 0.2s;
   z-index: 3;
   opacity: 1; }
-  .site-header.top {
+  .site-header .goBack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 15px;
+    font-size: 25px; }
+    .site-header .goBack div {
+      border-right: 1px solid gray;
+      padding-right: 20px; }
+      .site-header .goBack div i {
+        margin-right: 10px; }
+      .site-header .goBack div a {
+        color: #fff;
+        text-decoration: none; }
+  .site-header.front-page .goBack {
+    display: none; }
+  .site-header.top.front-page {
     background-color: inherit;
     height: 105px; }
-    .site-header.top .site-branding {
+    .site-header.top.front-page .site-branding {
       opacity: 0; }
+  .site-header.not-front-page .main-navigation {
+    display: none; }
 
 .site-branding {
   -webkit-transition: all 0.2s;
@@ -1590,6 +1648,7 @@ div.ray-dot {
   .programs-section .text {
     opacity: 1; }
   .programs-section .content {
+    margin-top: 30px;
     text-align: center;
     font-size: 40px;
     font-style: italic;
@@ -1636,10 +1695,12 @@ div.ray-dot {
         .team-section .team-row .team-member-flex .team-member-inner .image {
           margin-top: 10px;
           border: 5px solid #fff;
-          background-color: gray;
           width: 200px;
           height: 200px;
-          border-radius: 50%; }
+          border-radius: 50%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center; }
         .team-section .team-row .team-member-flex .team-member-inner .name {
           margin: 10px 0;
           font-size: 32px; }

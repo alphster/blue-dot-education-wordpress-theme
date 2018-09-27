@@ -24,8 +24,9 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bde' ); ?></a>
 
-	<header id="masthead" class="site-header top">
+	<header id="masthead" class="site-header top <?php echo is_front_page() ? 'front-page' : 'not-front-page'?>">
 		<div class="max-width">
+			<div class="goBack"><div><i class="fas fa-chevron-left"></i><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Back</a></div></div>
 			<div class="site-branding">		
 				<div class="logo" alt="logo"></div>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>			
@@ -43,4 +44,4 @@
 		</div>		
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content <?php echo is_front_page() ? 'front-page' : 'not-front-page'?>">

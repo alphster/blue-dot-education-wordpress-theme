@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'bde_widgets_init' );
  * Enqueue scripts and styles.
  */
 function bde_scripts() {
-	wp_enqueue_style( 'bde-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'bde-style', get_stylesheet_uri(), array(), filemtime(get_stylesheet_directory() . '/style.css') );
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Permanent+Marker' );
 	wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.0.13/css/all.css');	
 
