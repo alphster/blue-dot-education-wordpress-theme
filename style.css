@@ -857,6 +857,7 @@ a {
   display: flex;
   max-width: 1200px;
   margin: 65px auto 0 auto;
+  padding: 0 20px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -876,6 +877,12 @@ a {
         margin-bottom: 8px;
         font-size: 14px;
         line-height: 18px; }
+  @media screen and (max-width: 1200px) {
+    .site-content.not-front-page {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .no-sidebar .content-area {
   float: none;
@@ -1109,6 +1116,13 @@ div.ray-dot {
             align-items: center;
     margin-right: 15px;
     font-size: 25px; }
+    @media screen and (max-width: 525px) {
+      .site-header .goBack div a {
+        margin: 0 5px; }
+        .site-header .goBack div a i {
+          margin-right: 0; }
+        .site-header .goBack div a span {
+          display: none; } }
     .site-header .goBack div {
       border-right: 1px solid gray;
       padding-right: 20px; }
@@ -1695,8 +1709,8 @@ div.ray-dot {
         .team-section .team-row .team-member-flex .team-member-inner .image {
           margin-top: 10px;
           border: 5px solid #fff;
-          width: 200px;
-          height: 200px;
+          width: 250px;
+          height: 250px;
           border-radius: 50%;
           background-size: cover;
           background-repeat: no-repeat;

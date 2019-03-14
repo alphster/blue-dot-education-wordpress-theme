@@ -3,6 +3,7 @@
 	max-width: 1200px;
 	//justify-content: center;
 	margin: 65px auto 0 auto;
+	padding: 0 20px;
 	flex-direction: row;
 	
 	.content-area {
@@ -35,6 +36,10 @@
 		//float: right;
 		//overflow: hidden;
 		//width: $size__site-sidebar;
+	}
+
+	@media screen and (max-width: 1200px) {
+		flex-direction: column;
 	}
 }
 
